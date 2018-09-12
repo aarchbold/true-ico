@@ -8,7 +8,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+# Install gulp globally: npm install -g gulp
+# Install the sass gem: gem install sass (might need sudo)
+# Install the dev dependencies: npm install
+
 
 ```
 Give examples
