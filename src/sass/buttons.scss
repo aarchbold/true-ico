@@ -1,0 +1,21 @@
+// button styles
+
+button, .button {
+    transition: all 0.25s;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    color: $color-main-font;
+    opacity: 1;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom right, $color-button-light, $color-button-dark);
+    padding: 16px;
+    border-radius: 30px;
+    &:hover {
+        opacity: 0.9;
+        background-image: linear-gradient(to bottom right, $color-button-dark, $color-button-light);
+    }
+}

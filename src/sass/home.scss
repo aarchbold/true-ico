@@ -6,8 +6,33 @@ body {
     color: white;
 }
 
+.home-comet1 {
+    position: absolute;
+    width: 80px;
+    left: -100px;
+    animation: shootingStar linear 8s 4s infinite;
+}
+
+.home-comet2 {
+    position: absolute;
+    width: 40px;
+    top: 300px;
+    left: -100px;
+    animation: shootingStar linear 8s 2s infinite;
+}
+
+.home-comet3 {
+    position: absolute;
+    width: 20px;
+    top: 200px;
+    left: -100px;
+    animation: shootingStar linear 10s 4s infinite;
+}
+
 .page-container {
-    padding-right: 440px;
+    position: relative;
+    margin-right: 440px;
+    overflow: hidden;
 }
 
 .home-container {

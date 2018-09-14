@@ -1,0 +1,26 @@
+/* Signup styles
+*/
+
+.home-signup__header {
+    font-size: 24px;
+    color: $color-coupon-font;
+    margin-bottom: 30px;
+}
+
+.home-signup__intro {
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+.home-signup__form {
+    margin: 65px 0 0;
+    label {
+        display: block;
+        font-size: 12px;
+        padding-bottom: 6px;
+    }
+}
+
+.home-signup__cta {
+    padding-top: 20px;
+}

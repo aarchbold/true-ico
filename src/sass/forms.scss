@@ -1,0 +1,20 @@
+// forms styles
+
+input {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding: 6px 0px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid $color-form-background;
+    outline: none;
+}
+
+select {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding: 6px 0px;
+    margin-bottom: 30px;
+}

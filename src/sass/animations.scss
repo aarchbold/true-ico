@@ -1,0 +1,20 @@
+// animations styles
+
+
+@keyframes shootingStar {
+    0% {
+        transform: translate(-2000px,1000px)
+    }
+    100% {
+        transform: translate(3000px,-1000px)
+    }
+}
+
+@keyframes shootingStar2 {
+    0% {
+        transform: translate(-2000px,1000px)
+    }
+    100% {
+        transform: translate(3000px,-500px)
+    }
+}
