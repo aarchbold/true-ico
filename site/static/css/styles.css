@@ -212,6 +212,8 @@ body {
   position: relative;
   margin-right: 440px;
   overflow: hidden;
+  background: #000000 url(../images/bgs/bg-true.jpg) 50% 50% no-repeat;
+  background-size: cover;
 }
 
 .home-container {
