@@ -1,6 +1,12 @@
 /* settings styles
 */
 
+// breakpoints
+$breakpoint-big-screen: 1300px;
+$breakpoint-nav-slim: 1000px;
+$breakpoint-nav-stack: 820px;
+$breakpoint-phablet: 600px;
+
 // branded colors
 $color-background: #000000;
 $color-main-font: white;
