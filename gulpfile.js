@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify');
 
     config = {
-        vendorsPath: './src/js/vendor',
+        vendorsPath: './src/js/vendors',
         jsPath: './src/js/app',
         jsDest: './site/static/js',
         sassPath: './src/sass',
@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 gulp.task('vendors', function() {
     return gulp.src(config.vendorsPath + '/*.js')
         .pipe(concat('vendors.js'))
-        .pipe(gulp.dest(config.jsDest + '/vendor/'));
+        .pipe(gulp.dest(config.jsDest));
 });
 
 gulp.task('js', function() {

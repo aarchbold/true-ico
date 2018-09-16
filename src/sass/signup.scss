@@ -18,9 +18,20 @@
         display: block;
         font-size: 12px;
         padding-bottom: 6px;
+        margin-left: 15px;
     }
 }
 
 .home-signup__cta {
     padding-top: 20px;
+}
+
+.signup-select-wrapper {
+    margin-bottom: 30px;
+}
+
+.signup-select {
+    &.-full {
+        width: 100%;
+    }
 }

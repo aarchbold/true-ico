@@ -14,6 +14,7 @@
         <link rel="shortcut icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         <link rel="icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         -->
+        <script src="static/js/vendors.js?cache=bust"></script>
         <link rel="stylesheet" href="static/css/styles.css">
     </head>
     <body>
@@ -50,17 +51,21 @@
                         <input id="signup-firstname" class="home-signup__input" type="text" placeholder="FIRST NAME" />
                         <input id="signup-lastname" class="home-signup__input" type="text" placeholder="LAST NAME" />
                         <input id="signup-email" class="home-signup__input" type="text" placeholder="EMAIL ADDRESS" />
-                        <select id="signup-currency" class="home-signup__select">
-                            <option value="USD">USD</option>
-                            <option value="EURO">EURO</option>
-                            <option value="YEN">YEN</option>
-                            <option value="YUAN">YUAN</option>
-                        </select>
-                        <label>AMOUNT INTERESTED IN INVESTING</label>
-                        <select id="signup-currency-range" class="home-signup__select">
-                            <option value="100-1000">$100 - $1000</option>
-                            <option value="1000-5000">$1000 - $5000</option>
-                        </select>
+                        <div class="signup-select-wrapper">
+                            <select id="signup-currency" class="home-signup__select">
+                                <option value="USD">USD</option>
+                                <option value="EURO">EURO</option>
+                                <option value="YEN">YEN</option>
+                                <option value="YUAN">YUAN</option>
+                            </select>
+                        </div>
+                        <div class="signup-select-wrapper">
+                            <label>AMOUNT INTERESTED IN INVESTING</label>
+                            <select id="signup-currency-range" class="home-signup__select">
+                                <option value="100-1000">$100 - $1000</option>
+                                <option value="1000-5000">$1000 - $5000</option>
+                            </select>
+                        </div>
                         <div class="home-signup__cta">
                             <a href="#" class="button button-signup">I'M INTERESTED, SIGN ME UP</a>
                         </div>
