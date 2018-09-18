@@ -102,32 +102,6 @@ body {
     }
 }
 
-.home-signup {
-    transition: all 0.25s;
-    position: fixed;
-    right: 0;
-    top: 0;
-    max-width: 440px;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    background-color: $color-signup-background;
-    padding: 88px 44px;
-    color: $color-sidebar-font;
-    overflow: auto;
-    @media (max-width: $breakpoint-nav-slim) {
-        padding: 60px 20px;
-        max-width: 375px;
-    }
-    @media (max-width: $breakpoint-nav-stack) {
-        position: relative;
-        right: auto;
-        top: auto;
-        height: auto;
-        max-width: 100%;
-    }
-}
-
 .home-footer {
     text-align: center;
     padding: 20px 0 40px;

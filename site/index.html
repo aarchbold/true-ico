@@ -45,30 +45,36 @@
                 </div>
 
                 <div class="home-signup">
-                    <div class="home-signup__header">Save 25%</div>
-                    <div class="home-signup__intro">Sign up today to stay updated and get the same 25% discount the VCs get when the sale goes live later in 2018.</div>
-                    <div class="home-signup__form">
-                        <input id="signup-firstname" class="home-signup__input" type="text" placeholder="FIRST NAME" />
-                        <input id="signup-lastname" class="home-signup__input" type="text" placeholder="LAST NAME" />
-                        <input id="signup-email" class="home-signup__input" type="text" placeholder="EMAIL ADDRESS" />
-                        <div class="signup-select-wrapper">
-                            <select id="signup-currency" class="home-signup__select">
-                                <option value="USD">USD</option>
-                                <option value="EURO">EURO</option>
-                                <option value="YEN">YEN</option>
-                                <option value="YUAN">YUAN</option>
-                            </select>
-                        </div>
-                        <div class="signup-select-wrapper">
-                            <label>AMOUNT INTERESTED IN INVESTING</label>
-                            <select id="signup-currency-range" class="home-signup__select">
-                                <option value="100-1000">$100 - $1000</option>
-                                <option value="1000-5000">$1000 - $5000</option>
-                            </select>
-                        </div>
-                        <div class="home-signup__cta">
-                            <a href="#" class="button button-signup">I'M INTERESTED, SIGN ME UP</a>
-                        </div>
+                    <div class="home-signup__form-entry">
+                        <div class="home-signup__header">Save 25%</div>
+                        <div class="home-signup__intro">Sign up today to stay updated and get the same 25% discount the VCs get when the sale goes live later in 2018.</div>
+                        <form autocomplete="off">
+                            <div class="home-signup__form">
+                                <input id="formFirstName" class="home-signup__input" type="text" placeholder="FIRST NAME" />
+                                <input id="formLastName" class="home-signup__input" type="text" placeholder="LAST NAME" />
+                                <input id="formEmail" class="home-signup__input" type="text" placeholder="EMAIL ADDRESS" />
+                                <div class="signup-select-wrapper">
+                                    <select id="signupCurrency" class="home-signup__select">
+                                        <option value="USD">USD</option>
+                                        <option value="EURO">EURO</option>
+                                        <option value="YEN">YEN</option>
+                                    </select>
+                                </div>
+                                <div id="rangeContainer" class="signup-select-wrapper">
+                                    <label>AMOUNT INTERESTED IN INVESTING</label>
+                                    <select id="signupCurrencyRange" class="home-signup__select">
+                                        <!-- <option value="100-1000">$100 - $1000</option>
+                                        <option value="1000-5000">$1000 - $5000</option> -->
+                                    </select>
+                                </div>
+                                <div class="home-signup__cta">
+                                    <a href="#" id="formSubmit" class="button button-signup">I'M INTERESTED, SIGN ME UP</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="home-signup__form-success">
+                        Success!
                     </div>
                 </div>
 

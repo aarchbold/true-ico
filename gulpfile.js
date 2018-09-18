@@ -27,7 +27,7 @@ gulp.task('js', function() {
 
 gulp.task('compress', function () {
     return gulp.src(config.jsDest + '/app.js')
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(config.jsDest));
 });
 
