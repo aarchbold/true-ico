@@ -26,15 +26,36 @@
 }
 
 .home-signup__form-entry {
+    display: none;
     padding: 88px 44px;
     @media (max-width: $breakpoint-nav-stack) {
-        padding: 40px 0px;
+        padding: 40px 20px;
     }
 }
 
 .home-signup__form-success {
     padding: 88px 44px;
     display: none;
+    p {
+        line-height: 1.5;
+        margin-top: 26px;
+    }
+}
+
+.home-signup__success-email {
+    font-weight: bold;
+    color: $color-sidebar-link;
+}
+
+.home-signup__success-hdr {
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    img {
+        position: relative;
+        top: 4px;
+        left: 8px;
+    }
 }
 
 .home-signup__header {
@@ -94,6 +115,7 @@
     opacity: 0.8;
     text-align: center;
     z-index: 1111111;
+    color: $color-button-dark;
     .throbber-content {
         text-align: center;
         width: 100%;

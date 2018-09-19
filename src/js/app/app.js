@@ -5,12 +5,17 @@ $.fn.handleSignUp = function() {
         $firstName = $('#formFirstName',$context),
         $lastName = $('#formLastName',$context),
         $email = $('#formEmail',$context),
-        $currency = $('#formEmail',$context),
-        // this may be tricky as it's getting automatically created
-        $amount = $('#formEmail',$context),
         $submit = $('#formSubmit',$context),
         $error = $('.home-signup__error',$context),
-        $throbber = $('.home-signup__throbber',$context);
+        $throbber = $('.home-signup__throbber',$context),
+        $emailHolder = $('.home-signup__success-email');
+    
+    if (localStorage.getItem('trueSignUpEmail')) {
+        $emailHolder.html(localStorage.getItem('trueSignUpEmail'));
+        $successPanel.fadeIn();
+    } else {
+        $entryPanel.fadeIn();
+    }
 
     var usdOptions = [
         {
@@ -62,6 +67,8 @@ $.fn.handleSignUp = function() {
             window.setTimeout(function() {
                 $entryPanel.hide();
                 $successPanel.show();
+                $emailHolder.html($email.val());
+                localStorage.setItem('trueSignUpEmail',$email.val());
             },2000);
         }
     };
