@@ -328,7 +328,8 @@ body {
   position: relative;
   margin-right: 440px;
   overflow: hidden;
-  background: #000000 url(../images/bgs/bg-true.jpg) 50% -10% no-repeat;
+  background: #000000 url(../images/bgs/bg-true.jpg) 20% 50% no-repeat;
+  background-size: cover;
 }
 @media (max-width: 1000px) {
   .page-container {

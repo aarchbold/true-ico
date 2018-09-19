@@ -17,21 +17,6 @@ $.fn.handleSignUp = function() {
         $entryPanel.fadeIn();
     }
 
-    var usdOptions = [
-        {
-            value: '0-100',
-            label: '$0 - $100',
-        },
-        {
-            value: '100-1000',
-            label: '$100 - $1,000',
-        },
-        {
-            value: '1000-5000',
-            label: '$1000 - $5,000',
-        }
-    ]
-
     $firstName.keyup(function(){
         $error.hide();
     })
@@ -176,11 +161,20 @@ $(function(){
         placeholder: null,
         class_container: 'minict_wrapper signup-select -full'
     });
-    // $("#signupCurrencyRange").minimalect({
-    //     placeholder: null,
-    //     class_container: 'minict_wrapper signup-select -full'
-    // });
 
     $('.home-signup').handleSignUp();
     $('.home-signup__form').handleCurrency('USD');
+
+
+    var $win = $(window);
+
+    $('div.scrollerino').each(function(){
+        var scroll_speed = 4;
+        var $this = $(this);
+        $(window).scroll(function() {
+            var bgScroll = (($win.scrollTop() - $this.offset().top)/ scroll_speed);
+            var bgPosition = '20% '+ bgScroll + 'px';
+            $this.css({ backgroundPosition: bgPosition });
+        });
+    });
 });
