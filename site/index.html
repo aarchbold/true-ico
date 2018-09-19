@@ -46,6 +46,12 @@
 
                 <div class="home-signup">
                     <div class="home-signup__form-entry">
+                        <div class="home-signup__throbber">
+                            <div class="throbber-content">
+                                <img src="static/images/throbber.svg" width="80"  /><br />
+                                Processing Request
+                            </div>
+                        </div>
                         <div class="home-signup__header">Save 25%</div>
                         <div class="home-signup__intro">Sign up today to stay updated and get the same 25% discount the VCs get when the sale goes live later in 2018.</div>
                         <form autocomplete="off">
@@ -67,8 +73,11 @@
                                         <option value="1000-5000">$1000 - $5000</option> -->
                                     </select>
                                 </div>
+                                <div class="home-signup__error">
+                                    Please enter a first name, last name, and valid email address.
+                                </div>
                                 <div class="home-signup__cta">
-                                    <a href="#" id="formSubmit" class="button button-signup">I'M INTERESTED, SIGN ME UP</a>
+                                    <button type="submit" id="formSubmit" class="button button-signup">I'M INTERESTED, SIGN ME UP</button>
                                 </div>
                             </div>
                         </form>
@@ -84,7 +93,7 @@
                         <a href="https://play.google.com/store/apps/details?id=hellomobile.hello" target="_blank"><img class="home-footer__button" src="static/images/buttons/button-google-play.png" width="140" /></a>
                     </div>
                     <div class="home-footer__legal">
-                        <a href="#">Contact Us</a> &bull; <a href="#">Copyright 2018 Hello Mobile Inc.</a> 
+                        <a href="#">Contact Us</a> &bull; Copyright 2018 Hello Mobile Inc. 
                     </div>
                 </div>
             </div>

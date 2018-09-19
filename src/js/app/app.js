@@ -8,7 +8,9 @@ $.fn.handleSignUp = function() {
         $currency = $('#formEmail',$context),
         // this may be tricky as it's getting automatically created
         $amount = $('#formEmail',$context),
-        $submit = $('#formSubmit',$context);
+        $submit = $('#formSubmit',$context),
+        $error = $('.home-signup__error',$context),
+        $throbber = $('.home-signup__throbber',$context);
 
     var usdOptions = [
         {
@@ -24,13 +26,52 @@ $.fn.handleSignUp = function() {
             label: '$1000 - $5,000',
         }
     ]
+
+    $firstName.keyup(function(){
+        $error.hide();
+    })
+    $lastName.keyup(function(){
+        $error.hide();
+    })
+    $email.keyup(function(){
+        $error.hide();
+    })
+
+    function submitForm() {
+        postData = {
+            firstName: $firstName.val(),
+            lastName: $lastName.val(),
+            email: $email.val(),
+            currency: $('#signupCurrency',$context).val(),
+            range: $('#signupCurrencyRange',$context).val()
+        }
+        console.log('form post data:');
+        console.log(postData);
+        
+    };
+
+    function validateForm() {
+        if ($firstName.val() === '' ||
+            $lastName.val() === '' ||
+            $email.val() === '') {
+            $error.show(); 
+        } else {
+            $throbber.css('height',$entryPanel.outerHeight() + 'px');
+            $throbber.show();
+            submitForm();
+            window.setTimeout(function() {
+                $entryPanel.hide();
+                $successPanel.show();
+            },2000);
+        }
+    };
     
 
     console.log($context);
 
     $submit.click(function(e) {
         e.preventDefault();
-        console.log('hello')
+        validateForm();
     })
 }
 

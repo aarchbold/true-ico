@@ -14,7 +14,6 @@
     color: $color-sidebar-font;
     overflow: auto;
     @media (max-width: $breakpoint-nav-slim) {
-        padding: 60px 20px;
         max-width: 375px;
     }
     @media (max-width: $breakpoint-nav-stack) {
@@ -28,6 +27,9 @@
 
 .home-signup__form-entry {
     padding: 88px 44px;
+    @media (max-width: $breakpoint-nav-stack) {
+        padding: 40px 0px;
+    }
 }
 
 .home-signup__form-success {
@@ -71,5 +73,35 @@
 .signup-select {
     &.-full {
         width: 100%;
+    }
+}
+
+.home-signup__error {
+    display: none;
+    color: red;
+    padding: 10px 0 10px;
+    line-height: 1.3;
+}
+
+.home-signup__throbber {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;
+    text-align: center;
+    z-index: 1111111;
+    .throbber-content {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        img {
+            display: inline-block;
+        }
     }
 }
