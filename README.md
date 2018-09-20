@@ -1,4 +1,4 @@
-# Project Title
+# True ICO
 
 ICO Splash page for True App
 
