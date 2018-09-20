@@ -3,8 +3,10 @@ function handleLocalizaion(langObj) {
     $('.language-selector__current span').text(langObj.short);
     if (langObj.full.toLowerCase() === 'english') {
         currentLang = english;
-    } else if (langObj.full.toLowerCase() === 'korea') {
-        currentLang = korea;
+    } else if (langObj.full.toLowerCase() === 'korean') {
+        currentLang = korean;
+    } else if (langObj.full.toLowerCase() === 'russian') {
+        currentLang = russian;
     }
     for (key in currentLang) {
         if (key === 'formfirstname' ||

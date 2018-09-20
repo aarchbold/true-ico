@@ -191,7 +191,9 @@ var english = {
     formfirstname: "First Name",
     formlastname: "Last Name",
     formemail: "Email Address",
+    formcurrencytype: "How would you like to invest?",
     formamount: "Amount Interested in Investing",
+    selectChoice: "Select a choice",
     formerror: "Please enter a first name, last name, and valid email address.",
     formbutton: "I'm Interested, Sign Me Up",
     success: "Success",
@@ -199,7 +201,7 @@ var english = {
     successbody2: "Have a great day.",
     successbody3: "- The Team @ True"
 }
-var korea = {
+var korean = {
     header: "페이스북의 문제점은 쉽게 고쳐질수 없습니다, 그래서 저희가 그 역활을 대신하고자 합니다.",
     body1: "지금 세계가 필요로 하는건 인센티브가 근본적으로 다른 새로운 세대의 소셜 미디어 플렛폼 입니다. 진실성, 친밀감 공유, 그리고 개인 사생활 자료를 초점으로 한 새로운 종류의 모빌 커뮤니티 (유동 공동체).",
     body2: "True (진실) 를 지지하는데 동참할 생각이 있으십니까?",
@@ -212,7 +214,9 @@ var korea = {
     formfirstname: "이름",
     formlastname: "성",
     formemail: "이메일 주소",
+    formcurrencytype: "How would you like to invest?",
     formamount: "투자하고 싶으신 금액",
+    selectChoice: "Select a choice",
     formerror: "Please enter a first name, last name, and valid email address.",
     formbutton: "관심 있습니다. 가입하겠습니다.",
     success: "Success",
@@ -225,8 +229,10 @@ function handleLocalizaion(langObj) {
     $('.language-selector__current span').text(langObj.short);
     if (langObj.full.toLowerCase() === 'english') {
         currentLang = english;
-    } else if (langObj.full.toLowerCase() === 'korea') {
-        currentLang = korea;
+    } else if (langObj.full.toLowerCase() === 'korean') {
+        currentLang = korean;
+    } else if (langObj.full.toLowerCase() === 'russian') {
+        currentLang = russian;
     }
     for (key in currentLang) {
         if (key === 'formfirstname' ||
@@ -282,3 +288,26 @@ $(function(){
     }
     $('.language-selector').localizr();
 });
+var russian = {
+    header: "Facebook уже не исправить. Мы идем ему на смену.",
+    body1: "Этому миру нужна кардинально новая социальная сеть. Принципиально иное мобильное сообщество, основанное на подлинности, ограниченном распространении информации и приватности персональных данных.",
+    body2: "Хотите поддержать True?",
+    body3: "В ближайшее время будет запущена крупнейшая в истории продажа токенов новой социальной платформы, при поддержке самых влиятельных персон Силиконовой Долины.",
+    body4: "Уже сегодня нашим приложением пользуется 2 миллиона человек. Хотите разделить с нами грядущий финансовый успех?",
+    contact: "Контакты",
+    footer: "Copyright 2018 Hello Mobile Inc.",
+    signupheader: "Сэкономьте 25%",
+    signuptext: "Подпишитесь сегодня, чтобы быть в курсе старта продаж в конце 2018 года и получить 25% скидку для будущих инвесторов.",
+    formfirstname: "Имя",
+    formlastname: "Фамилия",
+    formemail: "Email",
+    formcurrencytype: "How would you like to invest?",
+    formamount: "Желаемая сумма инвестиций",
+    selectChoice: "Доступные варианты",
+    formerror: "Пожалуйста, введите ваше имя, фамилию и действующий email.",
+    formbutton: "Подписаться!",
+    success: "Поздравляем! ",
+    successbody1: "Вам гарантирована скидка 25%. Скидочный код будет отправлен на вашу электронную почту перед началом продаж.",
+    successbody2: "Удачного вам дня!",
+    successbody3: "- Команда @True"
+}

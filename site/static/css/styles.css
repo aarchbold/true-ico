@@ -457,7 +457,7 @@ body {
   height: 0;
 }
 
-.home-video iframe {
+.home-video iframe, .home-video video {
   position: absolute;
   top: 0;
   left: 0;

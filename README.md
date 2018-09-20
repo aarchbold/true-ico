@@ -6,7 +6,7 @@ ICO Splash page for True App
 
 This repo contains both the source code, and the production ready compiled files.
 When you are ready to deploy to a server, simply use the files inside the /site folder.
-If you are developing CSS and/or changing localization text files and developing JavaScript, you'll need to clone the entire repo and follow the "Prerequisites" and "Installing" instructions below.
+If you are developing CSS and/or changing localization text files or developing JavaScript, you'll need to clone the entire repo and follow the "Prerequisites" and "Installing" instructions below.
 
 ### Prerequisites for development
 

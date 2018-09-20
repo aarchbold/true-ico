@@ -1,4 +1,4 @@
-var korea = {
+var korean = {
     header: "페이스북의 문제점은 쉽게 고쳐질수 없습니다, 그래서 저희가 그 역활을 대신하고자 합니다.",
     body1: "지금 세계가 필요로 하는건 인센티브가 근본적으로 다른 새로운 세대의 소셜 미디어 플렛폼 입니다. 진실성, 친밀감 공유, 그리고 개인 사생활 자료를 초점으로 한 새로운 종류의 모빌 커뮤니티 (유동 공동체).",
     body2: "True (진실) 를 지지하는데 동참할 생각이 있으십니까?",
@@ -11,7 +11,9 @@ var korea = {
     formfirstname: "이름",
     formlastname: "성",
     formemail: "이메일 주소",
+    formcurrencytype: "How would you like to invest?",
     formamount: "투자하고 싶으신 금액",
+    selectChoice: "Select a choice",
     formerror: "Please enter a first name, last name, and valid email address.",
     formbutton: "관심 있습니다. 가입하겠습니다.",
     success: "Success",
