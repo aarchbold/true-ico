@@ -1,91 +1,53 @@
 # Project Title
 
-One Paragraph of project description goes here
+ICO Splash page for True App
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This repo contains both the source code, and the production ready compiled files.
+When you are ready to deploy to a server, simply use the files inside the /site folder.
+If you are developing CSS and/or changing localization text files and developing JavaScript, you'll need to clone the entire repo and follow the "Prerequisites" and "Installing" instructions below.
 
-### Prerequisites
+### Prerequisites for development
 
-# Install gulp globally: npm install -g gulp
-# Install the sass gem: gem install sass (might need sudo)
-# Install the dev dependencies: npm install
+Using terminal, navigate to the repo root on your local machine. then run the following commands:
+* npm install -g gulp (this installs gulp and gulp command line tools globally)
+* gem install sass (this installs the sass gem for compiling scss files. you might need to use sudo if you get write permissions errors)
 
+### Installing the dependencies
 
-```
-Give examples
-```
+Using terminal, navigate to the repo root on your local machine. then run the following command:
+* npm install
 
-### Installing
+### Running the application for development
 
-A step by step series of examples that tell you how to get a development env running
+Using terminal, navigate to the repo root on your local machine. then run the following commands:
+* gulp (this builds the files)
+* gulp watch (this watches the files and automatically compiles them when you make changes)
 
-Say what the step will be
+### Description and location of files
 
-```
-Give the example
-```
+When making changes to Javascript and css files, you'll need to edit the ones in the "src" dir, NOT the ones in the "site" dir.
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+* /src/sass/ (this dir contains the scss source files. Edit these files and they will compile to styles.css inside /site/static/css/styles.css)
+* /src/js/app/ (this dir contains the JavaScript source files. Edit these files and they will compile to app.js inside /site/static/js/app.js)
+* /src/js/vendors/ (this dir contains 3rd party libraries like jQuery and other jQuery plugin files. Just drop files in here and they will concat and compile to /site/static/js/vendors.js)
+* /src/js/app/[language].js (localization files. These contain the strings that need to be translated. There will be one file for each language. This files compile to /site/static/js/app.js)
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+When deploying, just grab the files insite the "/site" directory and push to your hosting provider.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [SASS](https://sass-lang.com/) - The best css dev tool evar.
+* [jQuery](https://jquery.com/) - JavaScript library
+* [Minimalect](https://groenroos.github.io/minimalect/) - Select box replacement plugin
+* [Gulp](https://gulpjs.com/) - Task automation.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+If you need access to edit files, please contact pulsegrenade@gmail.com to be added as a contributor. 
 
-## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
