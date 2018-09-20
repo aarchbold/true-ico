@@ -514,6 +514,11 @@ body {
   text-decoration: underline;
   opacity: 0.7;
 }
+@media (max-width: 600px) {
+  .home-footer__legal {
+    font-size: 14px;
+  }
+}
 
 @media (max-width: 1300px) {
   .home-gutters {

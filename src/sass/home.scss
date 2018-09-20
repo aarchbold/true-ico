@@ -196,6 +196,9 @@ body {
             opacity: 0.7;
         }
     }
+    @media (max-width: $breakpoint-phablet) {
+        font-size: 14px;
+    }
 }
 
 
