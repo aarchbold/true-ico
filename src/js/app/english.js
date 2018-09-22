@@ -5,7 +5,7 @@ var english = {
     body3: "Shortly, we’ll be launching the biggest token sale for a new social media platform in history, led by the biggest names in Silicon Valley.",
     body4: "We already have 2 million users, how would you like to share in our financial success?",
     contact: "Contact Us",
-    footer: "저작권 2018 Hello Mobile Inc.",
+    footer: "Copyright 2018 Hello Mobile Inc.",
     signupheader: "Save 25%",
     signuptext: "Sign up today to stay updated and get the same 25% discount the VCs get when the sale goes live later in 2018.",
     formfirstname: "First Name",
@@ -19,5 +19,6 @@ var english = {
     success: "Success",
     successbody1: "Your 25% discount is now guaranteed. We’ll send an email to <email> with your discount code before the sale goes live.",
     successbody2: "Have a great day.",
-    successbody3: "- The Team @ True"
+    successbody3: "- The Team @ True",
+    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
 }

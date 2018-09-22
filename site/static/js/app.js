@@ -210,7 +210,7 @@ var english = {
     body3: "Shortly, we’ll be launching the biggest token sale for a new social media platform in history, led by the biggest names in Silicon Valley.",
     body4: "We already have 2 million users, how would you like to share in our financial success?",
     contact: "Contact Us",
-    footer: "저작권 2018 Hello Mobile Inc.",
+    footer: "Copyright 2018 Hello Mobile Inc.",
     signupheader: "Save 25%",
     signuptext: "Sign up today to stay updated and get the same 25% discount the VCs get when the sale goes live later in 2018.",
     formfirstname: "First Name",
@@ -224,7 +224,8 @@ var english = {
     success: "Success",
     successbody1: "Your 25% discount is now guaranteed. We’ll send an email to <email> with your discount code before the sale goes live.",
     successbody2: "Have a great day.",
-    successbody3: "- The Team @ True"
+    successbody3: "- The Team @ True",
+    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
 }
 var korean = {
     header: "페이스북의 문제점은 쉽게 고쳐질수 없습니다, 그래서 저희가 그 역활을 대신하고자 합니다.",
@@ -244,10 +245,11 @@ var korean = {
     selectChoice: "Select a choice",
     formerror: "이름, 성, 그리고 유효한 이메일 주소를 입력해 주십시요.",
     formbutton: "관심 있습니다. 가입하겠습니다.",
-    success: "Success",
+    success: "가입 성공을 축하 드립니다~!",
     successbody1: "귀하께 약속드린 25%의 디스카운트를 지금 방금 보증 받으셨습니다. 세일이 시작되기전 저희가 <email> 이메일 주소로 디스카운트 코드를 보내드리겠습니다.",
     successbody2: "좋은하루 보내세요.",
-    successbody3: "- TRUE 팀 드림"
+    successbody3: "- TRUE 팀 드림",
+    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
 }
 function handleLocalizaion(langObj) {
     var currentLang;
