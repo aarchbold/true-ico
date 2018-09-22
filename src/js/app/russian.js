@@ -19,5 +19,6 @@ var russian = {
     success: "Поздравляем! ",
     successbody1: "Вам гарантирована скидка 25%. Скидочный код будет отправлен на вашу электронную почту перед началом продаж.",
     successbody2: "С наилучшими пожеланиями,",
-    successbody3: "- Команда @True"
+    successbody3: "- Команда @True",
+    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
 }
