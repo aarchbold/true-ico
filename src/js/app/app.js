@@ -73,44 +73,68 @@ $.fn.handleCurrency = function(currencyOption) {
         $currencyRangeContainer = $('#rangeContainer',$context);
     var usdOptions = [
         {
-            value: '0-100',
-            label: '$0 - $100',
+            value: '< 100',
+            label: '< $100',
         },
         {
             value: '100-1000',
             label: '$100 - $1,000',
         },
         {
-            value: '1000-5000',
-            label: '$1000 - $5,000',
+            value: '1000-10000',
+            label: '$1,000 - $10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '$10,000 - $50,000',
+        },
+        {
+            value: '50000+',
+            label: '$50,000 +',
         }
     ];
     var euroOptions = [
         {
-            value: '0-100',
-            label: '€0 - €100',
+            value: '< 100',
+            label: '< €100',
         },
         {
             value: '100-1000',
             label: '€100 - €1,000',
         },
         {
-            value: '1000-5000',
-            label: '€1000 - €5,000',
+            value: '1000-10000',
+            label: '€1,000 - €10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '€10,000 - €50,000',
+        },
+        {
+            value: '50000+',
+            label: '€50,000 +',
         }
     ];
     var yenOptions = [
         {
-            value: '0-100',
-            label: '¥0 - ¥100',
+            value: '< 100',
+            label: '< ¥100',
         },
         {
             value: '100-1000',
             label: '¥100 - ¥1,000',
         },
         {
-            value: '1000-5000',
-            label: '¥1000 - ¥5,000',
+            value: '1000-10000',
+            label: '¥1,000 - ¥10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '¥10,000 - ¥50,000',
+        },
+        {
+            value: '50000+',
+            label: '¥50,000 +',
         }
     ];
 
@@ -141,6 +165,7 @@ $.fn.handleCurrency = function(currencyOption) {
 
         window.setTimeout(function() {
             $('#signupCurrencyRange',$context).minimalect({
+                placeholder: '',
                 class_container: 'minict_wrapper signup-select -full'
             });
         })
