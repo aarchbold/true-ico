@@ -5,7 +5,7 @@ var korean = {
     body3: "곧 실리콘 밸리의 유명인사들이 이끄는 새로운 미디어 플렛폼을 위한 역사상 가장 큰 토큰 세일을 출시할 예정입니다.",
     body4: "저희는 벌써 이백만명의 회원이 가입되어 있습니다. 우리의 사업적 성공을 함께 나누시겠습니까?",
     contact: "고객 문의",
-    footer: "Copyright 2018 Hello Mobile Inc.",
+    footer: "저작권 2018 Hello Mobile Inc.",
     signupheader: "25% 절약하세요",
     signuptext: "오늘 가입하시고 가장 최신정보를 받으세요.  그리고 2018년 후반부 세일이 시작될때 벤처사업 자본가들이(VCs) 받는 것과 똑같은 25%의 디스카운트를 받으세요.",
     formfirstname: "이름",
