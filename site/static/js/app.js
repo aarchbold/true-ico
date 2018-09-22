@@ -217,12 +217,12 @@ var korean = {
     formcurrencytype: "How would you like to invest?",
     formamount: "투자하고 싶으신 금액",
     selectChoice: "Select a choice",
-    formerror: "Please enter a first name, last name, and valid email address.",
+    formerror: "이름, 성, 그리고 유효한 이메일 주소를 입력해 주십시요.",
     formbutton: "관심 있습니다. 가입하겠습니다.",
     success: "Success",
-    successbody1: "Your 25% discount is now guaranteed. We’ll send an email to <email> with your discount code before the sale goes live.",
-    successbody2: "Have a great day.",
-    successbody3: "- The Team @ True"
+    successbody1: "귀하께 약속드린 25%의 디스카운트를 지금 방금 보증 받으셨습니다. 세일이 시작되기전 저희가 <email> 이메일 주소로 디스카운트 코드를 보내드리겠습니다.",
+    successbody2: "좋은하루 보내세요.",
+    successbody3: "- TRUE 팀 드림"
 }
 function handleLocalizaion(langObj) {
     var currentLang;
