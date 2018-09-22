@@ -242,7 +242,7 @@ var korean = {
     formemail: "이메일 주소",
     formcurrencytype: "How would you like to invest?",
     formamount: "투자하고 싶으신 금액",
-    selectChoice: "Select a choice",
+    selectChoice: "선택하세요",
     formerror: "이름, 성, 그리고 유효한 이메일 주소를 입력해 주십시요.",
     formbutton: "관심 있습니다. 가입하겠습니다.",
     success: "가입 성공을 축하 드립니다~!",
@@ -336,5 +336,6 @@ var russian = {
     success: "Поздравляем! ",
     successbody1: "Вам гарантирована скидка 25%. Скидочный код будет отправлен на вашу электронную почту перед началом продаж.",
     successbody2: "С наилучшими пожеланиями,",
-    successbody3: "- Команда @True"
+    successbody3: "- Команда @True",
+    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
 }

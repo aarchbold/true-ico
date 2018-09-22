@@ -13,7 +13,7 @@ var korean = {
     formemail: "이메일 주소",
     formcurrencytype: "How would you like to invest?",
     formamount: "투자하고 싶으신 금액",
-    selectChoice: "Select a choice",
+    selectChoice: "선택하세요",
     formerror: "이름, 성, 그리고 유효한 이메일 주소를 입력해 주십시요.",
     formbutton: "관심 있습니다. 가입하겠습니다.",
     success: "가입 성공을 축하 드립니다~!",
