@@ -273,6 +273,11 @@ body {
   position: relative;
   padding: 0 24px 0 0;
 }
+@media (max-width: 820px) {
+  .language-selector__current {
+    font-size: 20px;
+  }
+}
 
 .language-selector__arrow {
   transition: all 0.2s;
@@ -284,6 +289,12 @@ body {
   display: inline-block;
   padding: 4px;
   transform: rotate(45deg);
+}
+@media (max-width: 820px) {
+  .language-selector__arrow {
+    padding: 6px;
+    right: -2px;
+  }
 }
 
 .language-selector__layer {
@@ -311,6 +322,26 @@ body {
   border-right: 8px solid transparent;
   border-bottom: 8px solid white;
 }
+@media (max-width: 820px) {
+  .language-selector__layer {
+    top: 20px;
+    right: -4px;
+  }
+  .language-selector__layer.-active {
+    transform: translateY(16px);
+  }
+  .language-selector__layer:before {
+    position: absolute;
+    content: ' ';
+    top: -8px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+  }
+}
 
 .language-selector__item {
   transition: all 0.2s;
@@ -324,6 +355,13 @@ body {
 }
 .language-selector__item:hover {
   opacity: 0.6;
+}
+@media (max-width: 820px) {
+  .language-selector__item {
+    font-size: 24px;
+    line-height: 1.5;
+    padding: 0px 6px 0px 10px;
+  }
 }
 
 .home-comet1 {

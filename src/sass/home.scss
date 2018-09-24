@@ -17,6 +17,9 @@ body {
 .language-selector__current {
     position: relative;
     padding: 0 24px 0 0;
+    @media (max-width: $breakpoint-nav-stack) {
+        font-size: 20px;
+    }
 }
 
 .language-selector__arrow {
@@ -29,6 +32,10 @@ body {
     display: inline-block;
     padding: 4px;
     transform: rotate(45deg);
+    @media (max-width: $breakpoint-nav-stack) {
+        padding: 6px;
+        right: -2px;
+    }
 }
 
 .language-selector__layer {
@@ -55,6 +62,24 @@ body {
         border-right: 8px solid transparent;
         border-bottom: 8px solid white;
     }
+    @media (max-width: $breakpoint-nav-stack) {
+        top: 20px;
+        right: -4px;
+        &.-active {
+            transform: translateY(16px);
+        }
+        &:before {
+            position: absolute;
+            content: ' ';
+            top: -8px;
+            right: 0;
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid white;
+        }
+    }
 }
 
 .language-selector__item {
@@ -68,6 +93,11 @@ body {
     font-size: 14px;
     &:hover {
         opacity: 0.6;
+    }
+    @media (max-width: $breakpoint-nav-stack) {
+        font-size: 24px;
+        line-height: 1.5;
+        padding: 0px 6px 0px 10px;
     }
 }
 
