@@ -28,6 +28,7 @@ $.fn.handleSignUp = function() {
     })
 
     function submitForm() {
+        debug = false;
         postData = {
             firstName: $firstName.val(),
             lastName: $lastName.val(),
@@ -35,26 +36,60 @@ $.fn.handleSignUp = function() {
             currency: $('#signupCurrency',$context).val(),
             range: $('#signupCurrencyRange',$context).val()
         }
-        console.log('form post data:');
-        console.log(postData);
-        
+        if(debug) console.log('form post data:');
+        if(debug) console.log(postData);
+
+        var myUrl = $email.closest("form").prop("action");
+        if(debug) console.log('myUrl=' + myUrl);
+        window['SUBSCRIBE_SUCCESS']="";
+        $.ajax({
+            type: "POST",
+            url: myUrl,
+            data: postData,
+            success: function(msg) {
+
+                if(msg.indexOf($("#responseRegex").html()) >= 0) {
+                    if(debug) console.log('GOT GOOD(' + $("#responseRegex").html() + ' from:');
+                    if(debug) console.log(msg);
+                    window['SUBSCRIBE_SUCCESS'] = 'Y';
+
+                } else {
+                    if(debug) console.log('GOT FAILURE from:');
+                    if(debug) console.log(msg);
+
+                    window['SUBSCRIBE_SUCCESS'] = 'N';
+                }
+                // console.log(msg);
+                // alert("Form Submitted: " + msg);
+            }
+        });
+
+
+
     };
 
     function validateForm() {
         if ($firstName.val() === '' ||
             $lastName.val() === '' ||
             $email.val() === '') {
-            $error.show(); 
+            $error.show();
+            return false;
         } else {
             $throbber.css('height',$entryPanel.outerHeight() + 'px');
             $throbber.show();
-            submitForm();
-            window.setTimeout(function() {
-                $entryPanel.hide();
-                $successPanel.show();
-                $emailHolder.html($email.val());
-                localStorage.setItem('trueSignUpEmail',$email.val());
-            },2000);
+
+            var isGood = submitForm();
+
+            displayResultOfSubscribe();
+            /*
+             window.setTimeout(function() {
+             $entryPanel.hide();
+             $successPanel.show();
+             $emailHolder.html($email.val());
+             // localStorage.setItem('trueSignUpEmail',$email.val());
+             },2000);
+             */
+            return true;
         }
     };
     
@@ -62,10 +97,68 @@ $.fn.handleSignUp = function() {
     console.log($context);
 
     $submit.click(function(e) {
+        var debug = false;
+
+        if(debug) console.log('submit.click occurs.');
+        if(debug) console.log(e);
+
         e.preventDefault();
-        validateForm();
+
+        var rv = validateForm();
+        if(debug) console.log('after validateForm');
+        if(rv) {
+            return true;
+        } else {
+            return false;
+        }
     })
 }
+function displayResultOfSubscribe() {
+    var debug = false;
+
+    try { clearTimeout(window['_ST_displayResultOfSubscribe']); } catch(e) { }
+    var myAnswer = window['SUBSCRIBE_SUCCESS'];
+    if(myAnswer && (myAnswer != "") ) {
+        if(debug) console.log('got myAnswer: ' + myAnswer);
+        if(myAnswer == "Y") {
+            window.setTimeout(function() {
+
+                $('.home-signup__form-entry').hide();
+                $('.home-signup__form-success').show();
+                var successHtml =  $('.home-signup__form-success').html();
+                successHtml = successHtml.replace("&lt;email&gt;", "<span class='home-signup__success-email'>" + $('#formEmail').val() + "</span>");
+                //console.log('new text: ' + successHtml);
+                $('.home-signup__form-success').html(successHtml);
+                $('.home-signup__success-email').html($('#formEmail').val());
+                // localStorage.setItem('trueSignUpEmail',$email.val());
+                
+                if(window.handleLeadConversion) {
+                  //console.log('DO handleLeadConversion');
+                  
+                  handleLeadConversion($('#formEmail').val());
+                } else {
+                  //console.log('NO FUNC handleLeadConversion');
+                }
+                
+            },1000);
+        }
+        else {
+            window.setTimeout(function() {
+				//html($("#submissionFailureMessage").html()).
+                $('.home-signup__error').html($('#submissionErrorMssg').html()).show();
+                $('.home-signup__form-entry').show();
+
+                $('.home-signup__throbber').hide();
+                // $('.home-signup__form-failure').show();
+            },1000);
+        }
+    } else {
+        if(debug) console.log('no result yet. try again shortly.');
+
+        window['_ST_displayResultOfSubscribe'] = setTimeout(displayResultOfSubscribe,100);
+    }
+}
+
 
 $.fn.handleCurrency = function(currencyOption) {
     var $context = $(this),
@@ -150,14 +243,14 @@ $.fn.handleCurrency = function(currencyOption) {
         // remove select
         $('#signupCurrencyRange',$context).remove();
 
-        var $newSelect = $('<select id="signupCurrencyRange" class="home-signup__select"></select>');
+        var $newSelect = $('<select id="signupCurrencyRange" name="MERGE5" class="home-signup__select"></select>');
         $currencyRangeContainer.append($newSelect);
         looper.forEach(function(amount,index) {
             var option;
             if (index === 0) {
-                option = '<option selected="selected" value='+ amount.value +'>'+ amount.label +'</option>';
+                option = '<option selected="selected" value="'+ amount.value +'">'+ amount.label +'</option>';
             } else {
-                option = '<option value='+ amount.value +'>'+ amount.label +'</option>';
+                option = '<option value="'+ amount.value +'">'+ amount.label +'</option>';
             }
             $newSelect.append(option);
         })
@@ -180,8 +273,9 @@ $.fn.handleCurrency = function(currencyOption) {
 }
 
 $(function(){
+    var debug = false;
     console.log('Hello World!');
-    console.log($);
+    if(debug) console.log($);
     $("#signupCurrency").minimalect({
         placeholder: null,
         class_container: 'minict_wrapper signup-select -full'
