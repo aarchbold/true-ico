@@ -12,6 +12,8 @@ function handleLocalizaion(language) {
         currentLang = korean;
     } else if (language === 'RU') {
         currentLang = russian;
+    } else if (language === 'JP') {
+        currentLang = japanese;
     }
     for (key in currentLang) {
         if (key === 'formfirstname' ||
