@@ -398,7 +398,7 @@ $.fn.localizr = function() {
 
     $languages.click(function(e) {
         var currentLang = $(e.target).data('language');
-        localStorage.setItem('trueLanguage',currentLang);
+        localStorage.setItem('trueLanguage2',currentLang);
         handleLocalizaion(currentLang);
         toggleLayer();
     });
@@ -416,11 +416,14 @@ var getParameterByName = function (name, url) {
 
 $(function(){
     console.log('Localizer');
+    if (localStorage.getItem('trueLanguage')) {
+        localStorage.removeItem('trueLanguage');
+    }
     if (getParameterByName('lang')) {
-        localStorage.setItem('trueLanguage',getParameterByName('lang').toLocaleUpperCase());
+        localStorage.setItem('trueLanguage2',getParameterByName('lang').toLocaleUpperCase());
         handleLocalizaion(getParameterByName('lang').toUpperCase());
-    } else if (localStorage.getItem('trueLanguage')) {
-        handleLocalizaion(localStorage.getItem('trueLanguage'));
+    } else if (localStorage.getItem('trueLanguage2')) {
+        handleLocalizaion(localStorage.getItem('trueLanguage2'));
     }
     $('.language-selector').localizr();
 });
