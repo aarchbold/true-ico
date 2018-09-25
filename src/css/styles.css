@@ -280,6 +280,10 @@ body {
 .language-selector__current {
   position: relative;
   padding: 0 30px 0 0;
+  outline: none;
+}
+.language-selector__current:active {
+  outline: none;
 }
 @media (max-width: 600px) {
   .language-selector__current {

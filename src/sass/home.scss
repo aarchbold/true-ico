@@ -23,6 +23,10 @@ body {
 .language-selector__current {
     position: relative;
     padding: 0 30px 0 0;
+    outline: none;
+    &:active {
+        outline: none;
+    }
     @media (max-width: $breakpoint-phablet) {
         float: right;
         border-radius: 5px;
@@ -32,6 +36,7 @@ body {
         border: 1px solid white;
         margin-right: 20px;
     }
+    
 }
 
 .language-selector__arrow {
