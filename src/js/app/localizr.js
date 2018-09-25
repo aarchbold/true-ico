@@ -1,11 +1,16 @@
-function handleLocalizaion(langObj) {
+function handleLocalizaion(language) {
     var currentLang;
-    $('.language-selector__current span').text(langObj.short);
-    if (langObj.full.toLowerCase() === 'english') {
+    $('.language-selector__item').each(function(i,e){
+        $(e).removeClass('-active');
+    });
+    $('[data-language='+language+']').addClass('-active');
+    $('.language-selector__current span').text(language);
+    
+    if (language === 'EN') {
         currentLang = english;
-    } else if (langObj.full.toLowerCase() === 'korean') {
+    } else if (language === 'KO') {
         currentLang = korean;
-    } else if (langObj.full.toLowerCase() === 'russian') {
+    } else if (language === 'RU') {
         currentLang = russian;
     }
     for (key in currentLang) {
@@ -45,11 +50,8 @@ $.fn.localizr = function() {
     });
 
     $languages.click(function(e) {
-        var currentLang = {
-            full: $(e.target).html(),
-            short: $(e.target).data('language')
-        }
-        localStorage.setItem('trueLanguage',JSON.stringify(currentLang));
+        var currentLang = $(e.target).data('language');
+        localStorage.setItem('trueLanguage',currentLang);
         handleLocalizaion(currentLang);
         toggleLayer();
     });
@@ -58,7 +60,7 @@ $.fn.localizr = function() {
 $(function(){
     console.log('Localizer');
     if (localStorage.getItem('trueLanguage')) {
-        handleLocalizaion(JSON.parse(localStorage.getItem('trueLanguage')));
+        handleLocalizaion(localStorage.getItem('trueLanguage'));
     }
     $('.language-selector').localizr();
 });
