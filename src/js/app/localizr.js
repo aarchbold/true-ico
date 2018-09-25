@@ -1,19 +1,25 @@
 function handleLocalizaion(language) {
     var currentLang;
+	var flag;
     $('.language-selector__item').each(function(i,e){
         $(e).removeClass('-active');
     });
     $('[data-language='+language+']').addClass('-active');
-    $('.language-selector__current span').text(language);
-    
+    //$('.language-selector__current span').text(language);
+	
+	// 
     if (language === 'EN') {
         currentLang = english;
+		flag = "us";
     } else if (language === 'KO') {
         currentLang = korean;
+		flag = "korea";
     } else if (language === 'RU') {
         currentLang = russian;
+		flag = "russia";
     } else if (language === 'JP') {
         currentLang = japanese;
+		flag = "japan";
     }
     for (key in currentLang) {
         if (key === 'formfirstname' ||
@@ -24,6 +30,8 @@ function handleLocalizaion(language) {
             $('[data-text='+key+']').text(currentLang[key]);
         }
     }
+	$('.language-selector__current span').html('<img src="static/images/icons/'+ flag +'.png" class="flag" /> ' + language);
+   
 }
 
 $.fn.localizr = function() {
