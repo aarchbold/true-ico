@@ -1,3 +1,21 @@
+function getParam(name) {
+    SCH = document.location.search;
+    if(window['W3T'] && (W3T['MORE_ARGS'] != "")) {
+        SCH += "&" + W3T['MORE_ARGS'];
+    }
+    SCH = "?&" + SCH.substring(1,SCH.length);
+    // alert('SCH = ' + SCH);
+    var start = SCH.indexOf("&" + name+"=");
+    var len = start+name.length+2;
+    if ((!start) && (name != SCH.substring(0,name.length))) return("");
+    if (start == -1) return "";
+    var end = SCH.indexOf("&",len);
+    if (end == -1) end = SCH.length;
+    // alert('finished getting parm ' + name);
+    return unescape(SCH.substring(len,end));
+}
+
+
 $.fn.handleSignUp = function() {
     var $context = $(this);
     var $entryPanel = $('.home-signup__form-entry',$context),
@@ -29,6 +47,7 @@ $.fn.handleSignUp = function() {
 
     function submitForm() {
         debug = false;
+	if(getParam('debug_post') == "Y") { debug = true; }
         postData = {
             firstName: $firstName.val(),
             lastName: $lastName.val(),
@@ -36,8 +55,15 @@ $.fn.handleSignUp = function() {
             currency: $('#signupCurrency',$context).val(),
             range: $('#signupCurrencyRange',$context).val()
         }
+       
         if(debug) console.log('form post data:');
         if(debug) console.log(postData);
+	var urlstr = ""; 
+  	for (var key in postData) { 
+	   urlstr += escape(key) + "=" + escape(postData[key]) + "&";
+	}
+	urlstr += "debug_post=Y";
+        if(debug) console.log('as URLARGS: ' + urlstr);
 
         var myUrl = $email.closest("form").prop("action");
         if(debug) console.log('myUrl=' + myUrl);
@@ -230,6 +256,50 @@ $.fn.handleCurrency = function(currencyOption) {
             label: '¥50,000 +',
         }
     ];
+    var wonOptions = [
+        {
+            value: '< 100',
+            label: '< ₩100',
+        },
+        {
+            value: '100-1000',
+            label: '₩100 - ₩1,000',
+        },
+        {
+            value: '1000-10000',
+            label: '₩1,000 - ₩10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '₩10,000 - ₩50,000',
+        },
+        {
+            value: '50000+',
+            label: '₩50,000 +',
+        }
+    ];
+    var rubOptions = [
+        {
+            value: '< 100',
+            label: '< ₽100',
+        },
+        {
+            value: '100-1000',
+            label: '₽100 - ₽¥1,000',
+        },
+        {
+            value: '1000-10000',
+            label: '₽1,000 - ₽10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '₽10,000 - ₽50,000',
+        },
+        {
+            value: '50000+',
+            label: '₽50,000 +',
+        }
+    ];
 
     function updateCurrencyOptions(currency) {
         var looper = [];
@@ -237,8 +307,12 @@ $.fn.handleCurrency = function(currencyOption) {
             looper = usdOptions;
         } else if (currency === 'EURO') {
             looper = euroOptions;
+        } else if (currency === 'WON') {
+            looper = wonOptions;
+        } else if (currency === 'RUB') {
+            looper = rubOptions;
         } else if (currency === 'YEN') {
-            looper = yenOptions;
+            looper = yenOptions;    
         }
         // remove select
         $('#signupCurrencyRange',$context).remove();

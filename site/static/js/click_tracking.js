@@ -270,12 +270,18 @@ function w3trackme() {
     if(Get_Parm("debug") == "w3px") {
         alert(scriptUrl);
     }
+    document.write('<d' + 'iv id="tracking_container_2017_click" style="display:none; overflow: stretch"></d' + 'iv>');
     document.write('<scr' + 'ipt type="text/javascript" src="' + scriptUrl + '"></scr' + 'ipt>');
+    document.write('<div id="3pt_container" style="display:none; overflow: stretch"><div id="3pt_contents"></div></div>');
 
     topLevelCookie("_nuab","0",1);
     if(mycp != "") {
         topLevelCookie("_local_cp",mycp,W3T['cookie_expiration_days']);
     }
+
+    do_thirdPartyTrackingAfterCookie(); // this function will recurse each .1 secs until it executes.
+
+
     W3T['page_load_tracked'] = true;
     <!--END MNME Code V7-->
 }
@@ -420,6 +426,76 @@ document.write('<!-- adroll Pixel --><scr' + 'ipt type="text/javascript">adroll_
         }
     }
 }
+
+function do_thirdPartyTrackingAfterCookie() {
+
+    var myClickCookie;
+    if(!window['_thirdPartyTrackingAfterCookie_COUNT']) {
+        window['_thirdPartyTrackingAfterCookie_COUNT'] = 1;
+    } else {
+        window['_thirdPartyTrackingAfterCookie_COUNT']++;
+    }
+    if(window['_thirdPartyTrackingAfterCookie_COUNT'] > 75) {
+        myClickCookie =new Date().getTime() +  + Math.random();
+        try { console.log('No cookie after 75 tries. generate a rand.'); } catch(e) { }
+    } else {
+        myClickCookie=GetCookie('ME_CLICKID');
+        try {mdalert('YES. got cookie ' + myClickCookie + ' after ' + window['_thirdPartyTrackingAfterCookie_COUNT'] + ' tries.'); } catch(e) { }
+    }
+    if( myClickCookie && typeof($ == "function") && $("#3pt_container")[0] ) {
+        _3ptac_drawbridgeTrack(myClickCookie);
+
+    } else {
+        try { clearTimeout(window['_myClickCookie_TO']); } catch(e) { mdalert('error clearing Timeout _myClickCookie_TO: ' +e); }
+        mdalert("no cookie for ME_CLICKID, try again shortly");
+        window["_myClickCookie_TO"] = setTimeout("do_thirdPartyTrackingAfterCookie()",100);
+    }
+}
+
+
+function _3ptac_drawbridgeTrack(_puuid) {
+    var dom = 'trueapp.co';
+    /*
+     <img width="1" height="1" src="https://p.adsymptotic.com/d/px/?_pid=15805&_psign=08d10d24d68b08b4e5c0f2d24b7f252b&_pu=luminas.com&_puuid=<YOUR COOKIE ID>&_rand=<RANDOM CACHE BUSTER>"/>
+     from their spec
+     Both http and https versions are supported for the above pixel
+     The values for _pid and _psign are fixed in the pixel and should not be altered
+     _pu is the url encoded site url where the pixel is firing from
+     _puuid is your cookie id
+     _rand is a cache buster which can be set to a random value or a timestamp
+     */
+    try { mdalert('drawbridgeTrack called with value: ' + _puuid); } catch(e) { }
+    var _rand = new Date().getTime() + "." + Math.random();
+    if(!_puuid) {
+        _puuid = _rand;
+        try { mdalert("warning! No _puuid passed in. Use _rand for now"); } catch(e) { }
+        // SimpleCookie ("_ADSYMPT_",_puuid, 24*60*30,"/");
+    }
+    var myPixel = 'https://p.adsymptotic.com/d/px/?_pid=15805&_psign=08d10d24d68b08b4e5c0f2d24b7f252b&_pu=' + dom + '&_puuid=' + _puuid + '&_rand=' + _rand;
+    try { mdalert('myPixel: ' + myPixel); } catch(e) { }
+
+    try {
+        var iframeElem = $("#3pt_contents");
+        mdalert('append after:');
+        mdalert( iframeElem );
+        mdalert("HTML:" + $("#3pt_container").html());
+
+
+        var code = '<!-- adsymptotic pageview code --><img width="1" height="1" src="' + myPixel + '"/><!-- End adsymptotic pageview code -->';
+        //iframeElem.after( "" + myPixel + "<br>" + code);
+        iframeElem.after( code);
+
+        mdalert('HTML NOW: ' + $("#3pt_container").html());
+        // document.write();
+    } catch(e) {
+        try {
+            console.log('Error doing adsymptotic:' + e);
+        } catch(e2) {
+
+        }
+    }
+}
+
 
 
 do_criteo_remarket_script();
