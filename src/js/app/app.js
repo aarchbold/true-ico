@@ -28,6 +28,11 @@ $.fn.handleSignUp = function() {
     })
 
     function submitForm() {
+        localStorage.setItem('trueEmail',$email.val());
+        var emailSwapper = $('#successEmail').text();
+        var replacedEmail = emailSwapper.replace('<email>',localStorage.getItem('trueEmail'));
+        $('#successEmail').text(replacedEmail);
+
         postData = {
             firstName: $firstName.val(),
             lastName: $lastName.val(),

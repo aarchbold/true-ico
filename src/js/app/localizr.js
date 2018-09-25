@@ -17,6 +17,9 @@ function handleLocalizaion(langObj) {
             $('[data-text='+key+']').text(currentLang[key]);
         }
     }
+    var emailSwapper = $('#successEmail').text();
+    var replacedEmail = emailSwapper.replace('<email>',localStorage.getItem('trueEmail'));
+    $('#successEmail').text(replacedEmail);
 }
 
 $.fn.localizr = function() {
