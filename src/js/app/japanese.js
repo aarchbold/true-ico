@@ -16,9 +16,9 @@ var japanese = {
     selectChoice: "選択して下さい",
     formerror: "氏名、Eメールアドレスをご記入ください。",
     formbutton: "サインアップします",
-    success: "Success",
+    success: "サクセス",
     successbody1: "25%ディスカウントが確約されました。セールが開始される前に、ディスカウントコードがのったEメールを <email> 宛てに、お送りいたします。",
-    successbody2: "Have a great day.",
-    successbody3: "- The Team @ True",
-    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
+    successbody2: "",
+    successbody3: "チーム@トゥルー",
+    submissionerrormssg: "あなたのデータを検証できませんでした。情報を再確認後、もう一度お試しください。"
 }

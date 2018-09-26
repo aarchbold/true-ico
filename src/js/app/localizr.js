@@ -20,6 +20,9 @@ function handleLocalizaion(language) {
     } else if (language === 'JP') {
         currentLang = japanese;
 		flag = "japan";
+    } else if (language === 'CH') {
+        currentLang = chinese;
+		flag = "china";
     }
     for (key in currentLang) {
         if (key === 'formfirstname' ||

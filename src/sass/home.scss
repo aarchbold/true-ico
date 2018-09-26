@@ -6,6 +6,14 @@ body {
     color: white;
 }
 
+.flag{
+	width:17px;
+	position: relative;
+    display: inline;
+	top:2px;
+}
+
+
 .language-selector {
     position: absolute;
     right: 30px;
@@ -32,12 +40,20 @@ body {
         border-radius: 5px;
         position: relative;
         padding: 6px 34px 6px 4px;
-        width: 33px;
+        width: 45px;
         border: 1px solid white;
         margin-right: 20px;
     }
     
 }
+
+.language-selector__current span {
+	@media (max-width: $breakpoint-phablet) {
+    	margin-right: -5px;
+	}
+}	
+
+
 
 .language-selector__arrow {
     transition: all 0.2s;
@@ -113,7 +129,7 @@ body {
     &:hover {
         opacity: 0.6;
     }
-    img {   
+    .check {   
         position: absolute;
         right: 0;
         top: 0;
@@ -122,7 +138,7 @@ body {
         width: 21px;
         @media (max-width: $breakpoint-phablet) {
             top: 20px;
-            right: 50%;
+            right: 49%;
             width: 30px;
             transform: translateX(50px);
         }

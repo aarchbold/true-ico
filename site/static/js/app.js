@@ -397,7 +397,7 @@ $(function(){
 });
 var chinese = {
     header: "Facebook 是改不好的, 所以我们要取代它。",
-	body1: "世界现在需要的是新一代的，激励机制完全不同的社交媒体平台。 需要的是一种新型的，重视真实性，亲密共享和个人数据隐私的移动社区。"
+	body1: "世界现在需要的是新一代的，激励机制完全不同的社交媒体平台。 需要的是一种新型的，重视真实性，亲密共享和个人数据隐私的移动社区。",
 	body2: "您对支持True感兴趣吗?",
 	body3: "最近,我们将推出一个由硅谷大人物发起的新社交媒体平台史上最大的代币销售活动.",
 	body4: "我们已经拥有200万用户，您想怎么分享我们的财务成功呢?",
@@ -414,8 +414,8 @@ var chinese = {
 	formerror: "请输入您的名字, 姓氏, 以及有效的邮箱地址.",
 	formbutton: "我感兴趣,报名参加",
 	success: "成功",
-	successbody1: "现在您已确定会获得25%的折扣。我们会在销售开始前，将折扣码发送至您的<email>邮箱。"
-	successbody2: "祝您愉快。"，
+	successbody1: "现在您已确定会获得25%的折扣。我们会在销售开始前，将折扣码发送至您的<email>邮箱。",
+	successbody2: "祝您愉快。",
 	successbody3: "- 团队 @True",
 	submissionerrormssg: "我们无法验证您的数据。 请重新核对您的信息，然后重试。"
 }
@@ -461,11 +461,11 @@ var japanese = {
     selectChoice: "選択して下さい",
     formerror: "氏名、Eメールアドレスをご記入ください。",
     formbutton: "サインアップします",
-    success: "Success",
+    success: "サクセス",
     successbody1: "25%ディスカウントが確約されました。セールが開始される前に、ディスカウントコードがのったEメールを <email> 宛てに、お送りいたします。",
-    successbody2: "Have a great day.",
-    successbody3: "- The Team @ True",
-    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
+    successbody2: "",
+    successbody3: "チーム@トゥルー",
+    submissionerrormssg: "あなたのデータを検証できませんでした。情報を再確認後、もう一度お試しください。"
 }
 var korean = {
     header: "페이스북의 문제점은 쉽게 고쳐질수 없습니다, 그래서 저희가 그 역활을 대신하고자 합니다.",
@@ -513,6 +513,9 @@ function handleLocalizaion(language) {
     } else if (language === 'JP') {
         currentLang = japanese;
 		flag = "japan";
+    } else if (language === 'CH') {
+        currentLang = chinese;
+		flag = "china";
     }
     for (key in currentLang) {
         if (key === 'formfirstname' ||
