@@ -305,6 +305,14 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+
+.flag{
+	width:17px;
+	position: relative;
+    display: inline;
+	top:2px;
+}
+
 @media (max-width: 600px) {
   .language-selector {
     width: 100%;
@@ -328,10 +336,14 @@ body {
     border-radius: 5px;
     position: relative;
     padding: 6px 34px 6px 4px;
-    width: 33px;
+    width: 45px;
     border: 1px solid white;
     margin-right: 20px;
   }
+	
+  .language-selector__current span {
+    margin-right: -5px;
+  }	
 }
 
 .language-selector__arrow {
@@ -429,7 +441,7 @@ body {
 .language-selector__item:hover {
   opacity: 0.6;
 }
-.language-selector__item img {
+.language-selector__item .check {
   position: absolute;
   right: 0;
   top: 0;
@@ -438,9 +450,9 @@ body {
   width: 21px;
 }
 @media (max-width: 600px) {
-  .language-selector__item img {
+  .language-selector__item .check {
     top: 20px;
-    right: 50%;
+    right: 49%;
     width: 30px;
     -webkit-transform: translateX(50px);
     -ms-transform: translateX(50px);
