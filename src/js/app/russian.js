@@ -11,7 +11,7 @@ var russian = {
     formfirstname: "Имя",
     formlastname: "Фамилия",
     formemail: "Email",
-    formcurrencytype: "How would you like to invest?",
+    formcurrencytype: "Как вы хотели бы инвестировать?",
     formamount: "Желаемая сумма инвестиций",
     selectChoice: "Доступные варианты",
     formerror: "Пожалуйста, введите ваше имя, фамилию и действующий email.",

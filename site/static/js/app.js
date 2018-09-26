@@ -1,3 +1,21 @@
+function getParam(name) {
+    SCH = document.location.search;
+    if(window['W3T'] && (W3T['MORE_ARGS'] != "")) {
+        SCH += "&" + W3T['MORE_ARGS'];
+    }
+    SCH = "?&" + SCH.substring(1,SCH.length);
+    // alert('SCH = ' + SCH);
+    var start = SCH.indexOf("&" + name+"=");
+    var len = start+name.length+2;
+    if ((!start) && (name != SCH.substring(0,name.length))) return("");
+    if (start == -1) return "";
+    var end = SCH.indexOf("&",len);
+    if (end == -1) end = SCH.length;
+    // alert('finished getting parm ' + name);
+    return unescape(SCH.substring(len,end));
+}
+
+
 $.fn.handleSignUp = function() {
     var $context = $(this);
     var $entryPanel = $('.home-signup__form-entry',$context),
@@ -29,6 +47,7 @@ $.fn.handleSignUp = function() {
 
     function submitForm() {
         debug = false;
+	if(getParam('debug_post') == "Y") { debug = true; }
         postData = {
             firstName: $firstName.val(),
             lastName: $lastName.val(),
@@ -36,8 +55,15 @@ $.fn.handleSignUp = function() {
             currency: $('#signupCurrency',$context).val(),
             range: $('#signupCurrencyRange',$context).val()
         }
+       
         if(debug) console.log('form post data:');
         if(debug) console.log(postData);
+	var urlstr = ""; 
+  	for (var key in postData) { 
+	   urlstr += escape(key) + "=" + escape(postData[key]) + "&";
+	}
+	urlstr += "debug_post=Y";
+        if(debug) console.log('as URLARGS: ' + urlstr);
 
         var myUrl = $email.closest("form").prop("action");
         if(debug) console.log('myUrl=' + myUrl);
@@ -230,6 +256,50 @@ $.fn.handleCurrency = function(currencyOption) {
             label: '¥50,000 +',
         }
     ];
+    var wonOptions = [
+        {
+            value: '< 100',
+            label: '< ₩100',
+        },
+        {
+            value: '100-1000',
+            label: '₩100 - ₩1,000',
+        },
+        {
+            value: '1000-10000',
+            label: '₩1,000 - ₩10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '₩10,000 - ₩50,000',
+        },
+        {
+            value: '50000+',
+            label: '₩50,000 +',
+        }
+    ];
+    var rubOptions = [
+        {
+            value: '< 100',
+            label: '< ₽100',
+        },
+        {
+            value: '100-1000',
+            label: '₽100 - ₽¥1,000',
+        },
+        {
+            value: '1000-10000',
+            label: '₽1,000 - ₽10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '₽10,000 - ₽50,000',
+        },
+        {
+            value: '50000+',
+            label: '₽50,000 +',
+        }
+    ];
 
     function updateCurrencyOptions(currency) {
         var looper = [];
@@ -237,8 +307,12 @@ $.fn.handleCurrency = function(currencyOption) {
             looper = usdOptions;
         } else if (currency === 'EURO') {
             looper = euroOptions;
+        } else if (currency === 'WON') {
+            looper = wonOptions;
+        } else if (currency === 'RUB') {
+            looper = rubOptions;
         } else if (currency === 'YEN') {
-            looper = yenOptions;
+            looper = yenOptions;    
         }
         // remove select
         $('#signupCurrencyRange',$context).remove();
@@ -334,7 +408,7 @@ var japanese = {
     formfirstname: "名",
     formlastname: "姓",
     formemail: "Eメール",
-    formcurrencytype: "How would you like to invest?",
+    formcurrencytype: "どのように投資したいですか？",
     formamount: "投資したい額",
     selectChoice: "選択して下さい",
     formerror: "氏名、Eメールアドレスをご記入ください。",
@@ -358,7 +432,7 @@ var korean = {
     formfirstname: "이름",
     formlastname: "성",
     formemail: "이메일 주소",
-    formcurrencytype: "How would you like to invest?",
+    formcurrencytype: "어떻게 투자하고 싶니?",
     formamount: "투자하고 싶으신 금액",
     selectChoice: "선택하세요",
     formerror: "이름, 성, 그리고 유효한 이메일 주소를 입력해 주십시요.",
@@ -367,24 +441,30 @@ var korean = {
     successbody1: "귀하께 약속드린 25%의 디스카운트를 지금 방금 보증 받으셨습니다. 세일이 시작되기전 저희가 <email> 이메일 주소로 디스카운트 코드를 보내드리겠습니다.",
     successbody2: "좋은하루 보내세요.",
     successbody3: "- TRUE 팀 드림",
-    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
+    submissionerrormssg: "귀하의 데이터를 확인할 수 없습니다. 정보를 확인하고 다시 시도하십시오."
 }
 function handleLocalizaion(language) {
     var currentLang;
+	var flag;
     $('.language-selector__item').each(function(i,e){
         $(e).removeClass('-active');
     });
     $('[data-language='+language+']').addClass('-active');
-    $('.language-selector__current span').text(language);
-    
+    //$('.language-selector__current span').text(language);
+	
+	// 
     if (language === 'EN') {
         currentLang = english;
+		flag = "us";
     } else if (language === 'KO') {
         currentLang = korean;
+		flag = "korea";
     } else if (language === 'RU') {
         currentLang = russian;
+		flag = "russia";
     } else if (language === 'JP') {
         currentLang = japanese;
+		flag = "japan";
     }
     for (key in currentLang) {
         if (key === 'formfirstname' ||
@@ -395,6 +475,8 @@ function handleLocalizaion(language) {
             $('[data-text='+key+']').text(currentLang[key]);
         }
     }
+	$('.language-selector__current span').html('<img src="static/images/icons/'+ flag +'.png" class="flag" /> ' + language);
+   
 }
 
 $.fn.localizr = function() {
@@ -466,7 +548,7 @@ var russian = {
     formfirstname: "Имя",
     formlastname: "Фамилия",
     formemail: "Email",
-    formcurrencytype: "How would you like to invest?",
+    formcurrencytype: "Как вы хотели бы инвестировать?",
     formamount: "Желаемая сумма инвестиций",
     selectChoice: "Доступные варианты",
     formerror: "Пожалуйста, введите ваше имя, фамилию и действующий email.",

@@ -11,7 +11,7 @@ var japanese = {
     formfirstname: "名",
     formlastname: "姓",
     formemail: "Eメール",
-    formcurrencytype: "How would you like to invest?",
+    formcurrencytype: "どのように投資したいですか？",
     formamount: "投資したい額",
     selectChoice: "選択して下さい",
     formerror: "氏名、Eメールアドレスをご記入ください。",
