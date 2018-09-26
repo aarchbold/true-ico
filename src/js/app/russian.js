@@ -10,7 +10,7 @@ var russian = {
     signuptext: "Подпишитесь сегодня, чтобы узнать о начале продаж в конце 2018 года и получить 25% скидку для будущих инвесторов.",
     formfirstname: "Имя",
     formlastname: "Фамилия",
-    formemail: "Email",
+    formemail: "Емейл",
     formcurrencytype: "Как вы хотели бы инвестировать?",
     formamount: "Желаемая сумма инвестиций",
     selectChoice: "Доступные варианты",
@@ -20,5 +20,5 @@ var russian = {
     successbody1: "Вам гарантирована скидка 25%. Скидочный код будет отправлен на вашу электронную почту перед началом продаж.",
     successbody2: "С наилучшими пожеланиями,",
     successbody3: "- Команда @True",
-    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
+    submissionerrormssg: "Пожалуйста, введите правильный адрес электронной почты."
 }
