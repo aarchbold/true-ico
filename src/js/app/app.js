@@ -27,14 +27,16 @@ $.fn.handleSignUp = function() {
         $error = $('.home-signup__error',$context),
         $throbber = $('.home-signup__throbber',$context),
         $emailHolder = $('.home-signup__success-email');
-    
+    /*
     if (localStorage.getItem('trueSignUpEmail')) {
         $emailHolder.html(localStorage.getItem('trueSignUpEmail'));
         $successPanel.fadeIn();
     } else {
+
         $entryPanel.fadeIn();
     }
-
+    */
+    $entryPanel.fadeIn();
     $firstName.keyup(function(){
         $error.hide();
     })
