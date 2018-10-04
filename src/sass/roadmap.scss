@@ -1,0 +1,144 @@
+/* Roadmap styles
+*/
+
+.roadmap-graphs__container {
+    color: $color-alternate-font;
+    min-height: 400px;
+    padding: 40px 0;
+    max-width: 770px;
+    margin: 0 auto;
+    @media (max-width: $breakpoint-tablet) {
+        padding: 40px 60px 50px 60px;
+    }
+    @media (max-width: $breakpoint-big-screen) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.roadmap-graphs {
+    h3 {
+        font-size: 45px;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+        @media (max-width: $breakpoint-phablet) {
+            text-align: center;
+        }
+    }
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+    @media (max-width: $breakpoint-tablet) {
+        //width: 82%;
+    }
+}
+
+.roadmap-graphs__col {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 22px;
+    @media (max-width: $breakpoint-phablet) {
+        width: 100%;
+        float: none;
+    }
+}
+
+.roadmap-graphs__svg {
+    width: 100%;
+    max-width: 290px;
+    margin-top: 60px;
+    @media (max-width: $breakpoint-phablet) {
+        margin-top: 10px;
+    }
+}
+
+.roadmap-graphs__ul {
+    margin-top: 60px;
+    li {
+        line-height: 1.4;
+    }
+    @media (max-width: $breakpoint-phablet) {
+        margin-top: 0;
+    }
+}
+
+.roadmap-graphs__ul--right {
+    li {
+        position: relative;
+        padding-left: 40px;
+        margin-bottom: 30px;
+        @media (max-width: $breakpoint-phablet) {
+            margin-bottom: 10px;
+        }
+        &:before {
+            content: ' ';
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.roadmap-graphs__item {
+    &.-red {
+        &:before {
+            border: 3px solid #FF496F;
+        }
+    }
+    &.-blue {
+        &:before {
+            border: 3px solid #4B49FF;
+        }
+    }
+    &.-lightblue {
+        &:before {
+            border: 3px solid #3EAEFF;
+        }
+    }
+    &.-lightgreen {
+        &:before {
+            border: 3px solid #7ED321;
+        }
+    }
+    &.-darkgreen {
+        &:before {
+            border: 3px solid #26CE93;
+        }
+    }
+    &.-yellow {
+        &:before {
+            border: 3px solid #F8E71C;
+        }
+    }
+    &.-grey {
+        &:before {
+            border: 3px solid #9B9B9B;
+        }
+    }
+}
+
+.roadmap-graphs__ul--left {
+    text-align: right;
+    li {
+        position: relative;
+        padding-right: 40px;
+        &:before {
+            content: ' ';
+            position: absolute;
+            right: 0;
+            top: 10px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+

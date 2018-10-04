@@ -187,6 +187,14 @@ body {
     //     background-size: auto;
     //     background-position: 50% 70%;
     // }
+    @media (max-width: $breakpoint-nav-slim) {
+        margin-right: 375px;
+    }
+    @media (max-width: $breakpoint-nav-stack) {
+        margin-right: 0;
+        background-size: auto;
+        background-position: 50% 70%;
+    }
 }
 
 .home-container {
@@ -203,10 +211,17 @@ body {
     }
 }
 
+.home-footer-image {
+    display: block;
+}
+
 .home-inner {
     padding: 0 60px;
     max-width: 770px;
     margin: 0 auto;
+    @media (max-width: $breakpoint-nav-slim) {
+        padding: 0;
+    }
 }
 
 .home-header {

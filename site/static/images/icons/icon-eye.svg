@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 25</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ICO-Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-1080.000000, -2082.000000)">
+            <g id="Group-12" transform="translate(1064.000000, 2064.000000)">
+                <g id="Group-25" transform="translate(16.000000, 18.000000)">
+                    <g id="Group-24">
+                        <circle id="Oval-5" fill="#1AB17C" cx="25" cy="25" r="25"></circle>
+                        <path d="M25,33 C30.8466797,33 36,27.1591797 36,24.5 C36,21.8408203 31.3261719,16 25,16 C18.6738281,16 14,22.2578125 14,24.5 C14,26.7421875 19.1533203,33 25,33 Z" id="Oval-19" stroke="#FFFFFF" stroke-width="2"></path>
+                    </g>
+                    <circle id="Oval-6" fill="#FFFFFF" cx="25" cy="24" r="5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

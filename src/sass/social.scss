@@ -1,12 +1,18 @@
 // social section
 
 .social-media {
-    padding: 40px 160px;
+    padding: 40px 0;
+    max-width: 770px;
+    margin: 0 auto;
     line-height: 1.2;
     z-index: 1000;
     position: relative;
-    min-height: 700px;
+    min-height: 620px;
     box-sizing: border-box;
+    color: $color-alternate-font;
+    @media (max-width: $breakpoint-phablet) {
+        text-align: center;
+    }
     h2 {
         font-size: 45px;
         margin-top: 20%;
@@ -14,9 +20,17 @@
     p {
         font-size: 20px;
         padding: 30px 60px 30px 0;
+        @media (max-width: $breakpoint-phablet) {
+            padding: 30px 0;
+            line-height: 1.4;
+        }
     }
     @media (max-width: $breakpoint-tablet) {
         padding: 40px 60px 50px 60px;
+    }
+    @media (max-width: $breakpoint-big-screen) {
+        padding-left: 40px;
+        padding-right: 40px;
     }
     // @media (max-width: 952px) {
     //     // min-height: 900px;
@@ -25,6 +39,7 @@
 }
 
 .social-media__row {
+    position: relative;
     &:after {
         content: ' ';
         display: table;
@@ -34,26 +49,60 @@
 
 .social-media__col {
     float: left;
-    width: 52%;
+    width: 65%;
     &:last-child {
-        width: 48%;
+        position: absolute;
+        float: none;
+        top: 0;
+        right: 0;
+        width: 44%;
+    }
+    @media (max-width: $breakpoint-cyclist) {
+        width: 100%;
+        float: none;
+        &:last-child {
+            position: relative;
+            float: none;
+            top: 0;
+            right: 0;
+            width: 75%;
+            margin: 0 auto;
+        }
     }
 }
 
 .social-media__infographic {
     position: relative;
-    height: 510px;
+    height: 530px;
     background: url(../images/bgs/bg-social-media.png) 50% 50% no-repeat;
     background-size: 100%;
+    @media (max-width: $breakpoint-phablet) {
+        height: 400px;
+    }
+    @media (max-width: $breakpoint-cyclist) {
+        top: 30px;
+    }
     .cyclist {
+        transition: all 0.25s;
         position: absolute;
-        bottom: -80px;
-        left: 40px;
-        width: 258px;
+        bottom: -37px;
+        left: -70px;
+        width: 200px;
         @media (max-width: $breakpoint-tablet) {
             bottom: -85px;
             left: -30px;
             width: 66%;
+        }
+        @media (max-width: $breakpoint-big-screen) {
+            bottom: 203px;
+            left: -70px;
+            width: 156px;
+        }
+        @media (max-width: $breakpoint-cyclist) {
+            bottom: auto;
+            left: -52px;
+            width: 50%;
+            top: 75px;
         }
     }
 }
@@ -64,48 +113,62 @@
     display: inline-block;
     background-color: white;
     box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.2);
-    min-width: 260px;
-    min-height: 85px;
+    min-width: 221px;
+    min-height: 76px;
     box-sizing: border-box;
     padding: 16px 16px 16px 80px;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     line-height: 1.3;
     img {
         position: absolute;
         left: 16px;
         top: 18px;
+        width: 42px;
     }
     strong {
-        font-size: 22px;
+        font-size: 20px;
         display: block;
     }
     &.-leaks {
         position: absolute;
-        top: 45%;
+        top: 224px;
         transform: translateY(-50%);
-        left: 0px;
+        right: 0px;
         @media (max-width: $breakpoint-tablet) {
-            top: 47%;
-            left: -32px;
+            // top: 47%;
+            // right: 0px;
+        }
+        @media (max-width: $breakpoint-cyclist) {
+            right: -20px;
+            top: 160px;
         }
     }
     &.-brother {
         position: absolute;
-        left: 42%;
+        right: 0px;
         top: 78px;
         @media (max-width: $breakpoint-tablet) {
-            left: 25%;
-            top: 62px;
+            // right: 0px;
+            // top: 62px;
+        }
+        @media (max-width: $breakpoint-cyclist) {
+            top: 0;
+            left: 20%;
+            width: 230px;
         }
     }
     &.-fakenews {
         position: absolute;
-        left: 52%;
-        top: 58%;
+        right: 0px;
+        top: 296px;
         @media (max-width: $breakpoint-tablet) {
-            left: 44%;
-            top: 65%;
+            // right: 0px;
+            // top: 65%;
+        }
+        @media (max-width: $breakpoint-cyclist) {
+            right: 20px;
+            top: 244px;
         }
     }
 }
