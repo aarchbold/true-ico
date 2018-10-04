@@ -7,6 +7,7 @@
    This is a Sass partial
 */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+@import url(https://fontlibrary.org/face/trueno);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -119,7 +120,7 @@ select {
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'TruenoLight', sans-serif;
 }
 
 button, .button {
@@ -161,7 +162,7 @@ button:hover, .button:hover {
   position: fixed;
   right: 0;
   top: 0;
-  max-width: 440px;
+  max-width: 390px;
   width: 100%;
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -505,7 +506,7 @@ body {
 
 .page-container {
   position: relative;
-  margin-right: 440px;
+  margin-right: 390px;
   overflow: hidden;
 }
 @media (max-width: 1000px) {
@@ -1193,6 +1194,11 @@ body {
   line-height: 1.4;
   padding: 0;
   font-size: 14px;
+}
+@media (max-width: 600px) {
+  .tokenization__col--inner p {
+    font-size: 16px;
+  }
 }
 @media (max-width: 600px) {
   .tokenization__col--inner {

@@ -14,8 +14,8 @@
         <link rel="shortcut icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         <link rel="icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         -->
-        <script src="static/js/vendors.js?cache=bust5"></script>
-        <link rel="stylesheet" href="static/css/styles.css?cache=bust5">
+        <script src="static/js/vendors.js?cache=bust7"></script>
+        <link rel="stylesheet" href="static/css/styles.css?cache=bust7">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -140,27 +140,27 @@
             <div class="social-media">
                 <div class="social-media__row">
                     <div class="social-media__col">
-                        <h2 class="social-media__header">
+                        <h2 data-text="socialheader" class="social-media__header">
                             WHY IS SOCIAL NETWORKING BROKEN?
                         </h2>
-                        <p>The largest social media platforms have become surveillance empires that prepetually manipulate your attention, secretly harvest your personal data and influence your behavior in order to profit.</p>
+                        <p data-text="socialbody">The largest social media platforms have become surveillance empires that prepetually manipulate your attention, secretly harvest your personal data and influence your behavior in order to profit.</p>
                     </div>
                     <div class="social-media__col">
                         <div class="social-media__infographic">
                             <div class="social-media__tag -brother">
                                 <img src="static/images/icons/icon-eye.svg" />
-                                <strong>Big Brother</strong>
-                                Surveillance
+                                <strong data-text="socialtag1a">Big Brother</strong>
+                                <span data-text="socialtag1b">Surveillance</span>
                             </div>
                             <div class="social-media__tag -leaks">
                                 <img src="static/images/icons/icon-warning.svg" />
-                                <strong>Privacy</strong>
-                                Leaks
+                                <strong data-text="socialtag2a">Privacy</strong>
+                                <span data-text="socialtag2b">Leaks</span>
                             </div>
                             <div class="social-media__tag -fakenews">
                                 <img src="static/images/icons/icon-paper.svg" />
-                                <strong>Influence</strong>
-                                Fake News
+                                <strong data-text="socialtag3a">Influence</strong>
+                                <span data-text="socialtag3b">Fake News</span>
                             </div>
                             <img class="cyclist" src="static/images/cyclist.png" />
                         </div>
@@ -170,10 +170,10 @@
 
             <div class="tokenization">
                 <div class="tokenization-header">
-                    <h2>
+                    <h2 data-text="tokenheader">
                         TOKENIZATION WITH TRUE COIN
                     </h2>
-                    <p>With TrueCoin, the opportunity is not to issue yet-another token, but to re-invent the medium by integrating cryptocurrency and the value of trade at its core.</p>
+                    <p data-text="tokenbody">With TrueCoin, the opportunity is not to issue yet-another token, but to re-invent the medium by integrating cryptocurrency and the value of trade at its core.</p>
                 </div>
                 <div class="tokenization__row">
                     <div class="tokenization__col">
@@ -181,7 +181,7 @@
                             <div class="tokenization__col--img">
                                 <img src="static/images/logos/logo-true-blue.svg" />
                             </div>
-                            <p>TRUE COIN CAN PERFORM MANY FUNCTIONS</p>
+                            <p data-text="tokentag1">TRUE COIN CAN PERFORM MANY FUNCTIONS</p>
                         </div>
                     </div>
 
@@ -190,7 +190,7 @@
                             <div class="tokenization__col--img">
                                 <img src="static/images/icons/icon-work-token.svg" />
                             </div>
-                            <p>As a work (utility) token, it will handle transaction settlements, rm fundraising and philanthropic engagements</p>
+                            <p data-text="tokentag2">As a work (utility) token, it will handle transaction settlements, rm fundraising and philanthropic engagements</p>
                         </div>
                     </div>
 
@@ -199,7 +199,7 @@
                             <div class="tokenization__col--img">
                                 <img src="static/images/icons/icon-discount-token.svg" />
                             </div>
-                            <p>As discount token it will allow access to paywalls, benefit from price cuts in purchases of products and services, and may alter royalty streams</p>
+                            <p data-text="tokentag3">As discount token it will allow access to paywalls, benefit from price cuts in purchases of products and services, and may alter royalty streams</p>
                         </div>
                     </div>
 
@@ -208,7 +208,7 @@
                             <div class="tokenization__col--img">
                                 <img src="static/images/icons/icon-staking-token.svg" />
                             </div>
-                            <p>As a staking token it may grant the user access to VIP events</p>
+                            <p data-text="tokentag4">As a staking token it may grant the user access to VIP events</p>
                         </div>
                     </div>
 
@@ -217,7 +217,7 @@
                             <div class="tokenization__col--img">
                                 <img src="static/images/icons/icon-voting-mechanism.svg" />
                             </div>
-                            <p>As voting mechanism, will allow users to contribute to the direction of the network’s future development, make community decisions, and become politically involved</p>
+                            <p data-text="tokentag5">As voting mechanism, will allow users to contribute to the direction of the network’s future development, make community decisions, and become politically involved</p>
                         </div>
                     </div>
 
@@ -226,7 +226,7 @@
                             <div class="tokenization__col--img">
                                 <img src="static/images/icons/icon-asset.svg" />
                             </div>
-                            <p>As an asset, the token may represent blocks of advertising capacity (a futures contract)</p>
+                            <p data-text="tokentag6">As an asset, the token may represent blocks of advertising capacity (a futures contract)</p>
                         </div>
                     </div>
                 </div>
@@ -234,18 +234,18 @@
 
             <div class="roadmap-graphs__container">
                 <div class="roadmap-graphs">
-                    <h3>Token Distribution</h3>
+                    <h3 data-text="distributionheader">Token Distribution</h3>
                     <div class="roadmap-graphs__col">
                         <img class="roadmap-graphs__svg -left-graph" src="static/images/roadmap/data-viz1.svg" />
                     </div>
                     <div class="roadmap-graphs__col">
                         <ul class="roadmap-graphs__ul roadmap-graphs__ul--right">
-                            <li class="roadmap-graphs__item -blue">35% PUBLIC SALE (ICO)</li>
-                            <li class="roadmap-graphs__item -red">20% RESERVE POOL</li>
-                            <li class="roadmap-graphs__item -lightblue">15% TEAM</li>
-                            <li class="roadmap-graphs__item -lightgreen">15% NETWORK GROWTH</li>
-                            <li class="roadmap-graphs__item -darkgreen">10% AIR DROPS/BIZ DEV</li>
-                            <li class="roadmap-graphs__item -yellow">5% ADVISORS, CONSULTANTS, PARTNERS</li>
+                            <li data-text="distributionbullet1" class="roadmap-graphs__item -blue">35% PUBLIC SALE (ICO)</li>
+                            <li data-text="distributionbullet2" class="roadmap-graphs__item -red">20% RESERVE POOL</li>
+                            <li data-text="distributionbullet3" class="roadmap-graphs__item -lightblue">15% TEAM</li>
+                            <li data-text="distributionbullet4" class="roadmap-graphs__item -lightgreen">15% NETWORK GROWTH</li>
+                            <li data-text="distributionbullet5" class="roadmap-graphs__item -darkgreen">10% AIR DROPS/BIZ DEV</li>
+                            <li data-text="distributionbullet6" class="roadmap-graphs__item -yellow">5% ADVISORS, CONSULTANTS, PARTNERS</li>
                         </ul>
                     </div>
                 </div>
@@ -261,7 +261,7 @@
                 </div>
             </div>
         </div>
-        <script src="static/js/app.js?cache=bust6"></script>
+        <script src="static/js/app.js?cache=bust7"></script>
 		<script type="text/javascript" src="static/js/click_tracking.js"></script>
 <script>
 function handleLeadConversion(email_addr) {
