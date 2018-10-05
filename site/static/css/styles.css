@@ -1325,7 +1325,7 @@ body {
 @media (max-width: 600px) {
   .roadmap-graphs__col {
     width: 100%;
-    float: none;
+    text-align: center;
   }
 }
 
@@ -1349,6 +1349,7 @@ body {
 @media (max-width: 600px) {
   .roadmap-graphs__ul {
     margin-top: 0;
+    text-align: left;
   }
 }
 
