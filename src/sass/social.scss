@@ -16,6 +16,9 @@
     h2 {
         font-size: 45px;
         margin-top: 20%;
+        @media (max-width: $breakpoint-phablet) {
+            font-size: 38px;
+        }
     }
     p {
         font-size: 20px;
@@ -31,6 +34,10 @@
     @media (max-width: $breakpoint-big-screen) {
         padding-left: 40px;
         padding-right: 40px;
+    }
+    @media (max-width: $breakpoint-phablet) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
     // @media (max-width: 952px) {
     //     // min-height: 900px;
@@ -78,6 +85,7 @@
     background-size: 100%;
     @media (max-width: $breakpoint-phablet) {
         height: 400px;
+        text-align: left;
     }
     @media (max-width: $breakpoint-cyclist) {
         top: 30px;
@@ -120,6 +128,9 @@
     font-size: 14px;
     text-transform: uppercase;
     line-height: 1.3;
+    @media (max-width: $breakpoint-phablet) {
+        padding-left: 70px;
+    }
     img {
         position: absolute;
         left: 16px;
@@ -169,6 +180,23 @@
         @media (max-width: $breakpoint-cyclist) {
             right: 20px;
             top: 244px;
+        }
+    }
+    @media (max-width: $breakpoint-phablet) {
+        &.-brother {
+            left: 20%;
+            right: auto;
+            width: 230px;
+        }
+        &.-leaks {
+            left: 20%;
+            right: auto;
+            width: 230px;
+        }
+        &.-fakenews {
+            left: 20%;
+            right: auto;
+            width: 230px;
         }
     }
 }
