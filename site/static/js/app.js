@@ -394,6 +394,34 @@ $.fn.rotateGraphs = function() {
     });
 }
 
+$.fn.handleMobileFooter = function() {
+    var $container = $(this),
+        $button = $('#footerCta', $container),
+        $form = $('.home-signup'),
+        $formClose = $('.home-signup__close'),
+        isScrolling;
+    $(window).scroll(function() {
+        $container.addClass('-hide');
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function() {
+            console.log('Scrolling has stopped.');
+            $container.removeClass('-hide');
+        }, 200);
+    });
+
+    $button.click(function(e) {
+        e.preventDefault();
+        $('body').css('overflow','hidden');
+        $form.show();
+    })
+
+    $formClose.click(function(e) {
+        e.preventDefault();
+        $('body').css('overflow','auto');
+        $form.hide();
+    })
+}
+
 $(function(){
     var debug = false;
     if(debug) console.log($);
@@ -405,6 +433,7 @@ $(function(){
     $('.roadmap-graphs').rotateGraphs();
     $('.home-signup').handleSignUp();
     $('.home-signup__form').handleCurrency('USD');
+    $('.mobile-form-cta').handleMobileFooter();
 
 
     var $win = $(window);
@@ -512,6 +541,7 @@ var english = {
     distributionbullet4: "15% NETWORK GROWTH",
     distributionbullet5: "10% AIR DROPS/BIZ DEV",
     distributionbullet6: "5% ADVISORS, CONSULTANTS, PARTNERS",
+    footercta: "Learn More"
 }
 var japanese = {
     header: "フェイスブックは修正できないので、私たちが代替します。",

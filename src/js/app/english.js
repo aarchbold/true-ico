@@ -44,4 +44,5 @@ var english = {
     distributionbullet4: "15% NETWORK GROWTH",
     distributionbullet5: "10% AIR DROPS/BIZ DEV",
     distributionbullet6: "5% ADVISORS, CONSULTANTS, PARTNERS",
+    footercta: "Learn More"
 }
