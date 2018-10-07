@@ -412,14 +412,24 @@ $.fn.handleMobileFooter = function() {
     $button.click(function(e) {
         e.preventDefault();
         $('body').css('overflow','hidden');
+        window.location.hash = 'signup';
         $form.show();
-    })
+    });
 
     $formClose.click(function(e) {
         e.preventDefault();
         $('body').css('overflow','auto');
-        $form.hide();
-    })
+        window.location.hash = '';
+        // $form.hide();
+    });
+
+    window.addEventListener('hashchange', function() {
+        if (window.location.hash === '') {
+            $form.hide();
+            $('body').css('overflow','auto');
+            window.location.hash = '';
+        }
+    }, false);
 }
 
 $(function(){
@@ -541,6 +551,7 @@ var english = {
     distributionbullet4: "15% NETWORK GROWTH",
     distributionbullet5: "10% AIR DROPS/BIZ DEV",
     distributionbullet6: "5% ADVISORS, CONSULTANTS, PARTNERS",
+    videoprompt: "LEARN HOW TRUE IS DIFFERENT",
     footercta: "Learn More"
 }
 var japanese = {
@@ -779,3 +790,29 @@ var russian = {
     distributionbullet5: "10% AIR DROPS/BIZ DEV",
     distributionbullet6: "5% ADVISORS, CONSULTANTS, PARTNERS",
 }
+$.fn.handleVideo= function() {
+    var $launcher = $('.home-video__cta--butons', $(this)),
+        $video = $('.home-video__container'),
+        $overlay = $('.home-video__overlay'),
+        $actualVideo = $('#actualVideo')[0],
+        $videoClose = $('.home-video__close');
+
+    $launcher.click(function(e) {
+        $video.fadeIn();
+    });
+
+    $overlay.click(function(e) {
+        $video.fadeOut();
+        $actualVideo.pause();
+    })
+
+    $videoClose.click(function(e) {
+        $video.fadeOut();
+        $actualVideo.pause();
+    })
+
+}
+
+$(function(){
+    $('#videoPop').handleVideo();
+});

@@ -21,6 +21,18 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div class="home-video__container">
+            <a href="#" class="home-video__close"></a>
+            <div class="home-video__overlay"></div>
+            <div class="home-video">
+                <video id="actualVideo" width="560" height="315" controls poster="static/images/poster.jpg">
+                    <source src="static/video/true-intro.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/tZARgdCseRE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+            </div>
+        </div>
         <div class="page-container">
             <div class="language-selector">
                 <div class="language-selector__current">
@@ -63,13 +75,11 @@
                     </h1>
                 </div>
 
-                <div class="home-video">
-                    <video width="560" height="315" controls poster="static/images/poster.jpg">
-                        <source src="static/video/true-intro.mp4" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
-                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/tZARgdCseRE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                <div id="videoPop" class="home-video__cta">
+                    <div class="home-video__cta--butons">
+                        <img src="static/images/icons/icon-play-video.png" width="144" />
+                        LEARN HOW  TRUE IS DIFFERENT
+                    </div>
                 </div>
 
                 <div class="home-body home-gutters">

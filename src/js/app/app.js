@@ -412,14 +412,24 @@ $.fn.handleMobileFooter = function() {
     $button.click(function(e) {
         e.preventDefault();
         $('body').css('overflow','hidden');
+        window.location.hash = 'signup';
         $form.show();
-    })
+    });
 
     $formClose.click(function(e) {
         e.preventDefault();
         $('body').css('overflow','auto');
-        $form.hide();
-    })
+        window.location.hash = '';
+        // $form.hide();
+    });
+
+    window.addEventListener('hashchange', function() {
+        if (window.location.hash === '') {
+            $form.hide();
+            $('body').css('overflow','auto');
+            window.location.hash = '';
+        }
+    }, false);
 }
 
 $(function(){
