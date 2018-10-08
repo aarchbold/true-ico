@@ -372,28 +372,6 @@ $.fn.handleCurrency = function(currencyOption) {
     updateCurrencyOptions(currencyOption);
 }
 
-$.fn.rotateGraphs = function() {
-    var $leftGraph = $('.roadmap-graphs__svg.-left-graph'),
-        rotation = 0, 
-        scrollLoc = $(document).scrollTop();
-    $(window).scroll(function() {
-        var newLoc = $(document).scrollTop();
-        var diff = scrollLoc - newLoc;
-        rotation += diff, scrollLoc = newLoc;
-        var rotationStr = "rotate(" + rotation + "deg)";
-        $leftGraph.css({
-            "-webkit-transform": rotationStr,
-            "-moz-transform": rotationStr,
-            "transform": rotationStr
-        });
-        // $rightGraph.css({
-        //     "-webkit-transform": rotationStr,
-        //     "-moz-transform": rotationStr,
-        //     "transform": rotationStr
-        // });
-    });
-}
-
 $.fn.handleMobileFooter = function() {
     var $container = $(this),
         $button = $('#footerCta', $container),
@@ -440,7 +418,7 @@ $(function(){
         class_container: 'minict_wrapper signup-select -full'
     });
 
-    $('.roadmap-graphs').rotateGraphs();
+    
     $('.home-signup').handleSignUp();
     $('.home-signup__form').handleCurrency('USD');
     $('.mobile-form-cta').handleMobileFooter();

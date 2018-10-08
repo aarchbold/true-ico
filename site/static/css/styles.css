@@ -87,6 +87,42 @@ table {
     transform: translate(0, 0px);
   }
 }
+@-webkit-keyframes bouncey {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes bouncey {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 @-webkit-keyframes shootingStar {
   0% {
     -webkit-transform: translate(-2000px, 1000px);
@@ -670,6 +706,7 @@ body {
 }
 
 .home-video__cta--butons {
+  width: 300px;
   cursor: pointer;
   -webkit-transition: all 0.25s;
   -o-transition: all 0.25s;
@@ -1449,6 +1486,17 @@ body {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-animation-name: bouncey;
+  animation-name: bouncey;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .tokenization__col--inner {
@@ -1554,6 +1602,20 @@ body {
   }
 }
 
+.roadmap-graphs__svg--holder {
+  -webkit-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+.roadmap-graphs__svg--holder.animate {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 .roadmap-graphs__svg {
   width: 100%;
   max-width: 290px;
@@ -1598,6 +1660,19 @@ body {
   border-radius: 50%;
 }
 
+.roadmap-graphs__item {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: translateX(1000px);
+  -ms-transform: translateX(1000px);
+  transform: translateX(1000px);
+}
+.roadmap-graphs__item.animate {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
 .roadmap-graphs__item.-red:before {
   border: 3px solid #FF496F;
 }

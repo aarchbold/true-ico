@@ -69,6 +69,20 @@ table {
     transform: translate(0, 0px);
   }
 }
+@keyframes bouncey {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes shootingStar {
   0% {
     transform: translate(-2000px, 1000px);
@@ -589,6 +603,7 @@ body {
 }
 
 .home-video__cta--butons {
+  width: 300px;
   cursor: pointer;
   transition: all 0.25s;
   position: absolute;
@@ -1318,6 +1333,11 @@ body {
 .tokenization__col.animate {
   opacity: 1;
   transform: scale(1);
+  animation-name: bouncey;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-delay: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .tokenization__col--inner {
@@ -1418,6 +1438,14 @@ body {
   }
 }
 
+.roadmap-graphs__svg--holder {
+  transition: all 1.5s;
+  transform: scale(0);
+}
+.roadmap-graphs__svg--holder.animate {
+  transform: scale(1);
+}
+
 .roadmap-graphs__svg {
   width: 100%;
   max-width: 290px;
@@ -1462,6 +1490,13 @@ body {
   border-radius: 50%;
 }
 
+.roadmap-graphs__item {
+  transition: all 0.3s;
+  transform: translateX(1000px);
+}
+.roadmap-graphs__item.animate {
+  transform: translateX(0);
+}
 .roadmap-graphs__item.-red:before {
   border: 3px solid #FF496F;
 }
