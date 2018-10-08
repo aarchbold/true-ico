@@ -60,15 +60,22 @@
 }
 
 .tokenization__col {
+    transition: all 0.2s;
     float: left;
     width: 33.3%;
     padding: 0 10px 20px;
     box-sizing: border-box;
+    opacity: 0;
+    transform: scale(0);
     @media (max-width: $breakpoint-big-screen) {
         width: 50%;
     }
     @media (max-width: $breakpoint-phablet) {
         width: 100%;
+    }
+    &.animate {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 

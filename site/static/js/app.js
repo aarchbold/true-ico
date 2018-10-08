@@ -43,6 +43,30 @@ function animateSocialSection(isInView) {
     }
 }
 
+function animateTokenSection(isInView) {
+    var $blocks = $('.tokenization__col'),
+        max = 2000,
+        min = 400,
+        timeoutTime = 200;
+
+    if (isInView) {
+        $blocks.each(function(i,e) {
+            console.log(e);
+            // timeoutTime = Math.floor(Math.random() * (max - min + 1)) + min;
+            timeoutTime = timeoutTime + 400;
+            setTimeout(function() {
+                $(e).addClass('animate');
+            },timeoutTime)
+        });
+    } else {
+        console.log('no blocks');
+        timeoutTime = 0;
+        $blocks.each(function(i,e) {
+            $(e).removeClass('animate');
+        });
+    }
+}
+
 $(function(){
     $(window).on('DOMContentLoaded load resize scroll', function() {
         if (isAnyPartOfElementInViewport($('.social-media')[0])) {
@@ -50,7 +74,15 @@ $(function(){
         } else {
             animateSocialSection(false);
         }
-    }); 
+    });
+
+    $(window).on('DOMContentLoaded load resize scroll', function() {
+        if (isAnyPartOfElementInViewport($('.tokenization__row')[0])) {
+            animateTokenSection(true);
+        } else {
+            animateTokenSection(false);
+        }
+    });
 });
 function getParam(name) {
     SCH = document.location.search;

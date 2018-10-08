@@ -1421,11 +1421,18 @@ body {
 }
 
 .tokenization__col {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
   float: left;
   width: 33.3%;
   padding: 0 10px 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 @media (max-width: 1300px) {
   .tokenization__col {
@@ -1436,6 +1443,12 @@ body {
   .tokenization__col {
     width: 100%;
   }
+}
+.tokenization__col.animate {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .tokenization__col--inner {
