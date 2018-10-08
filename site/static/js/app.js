@@ -49,20 +49,14 @@ function animateTokenSection(isInView) {
         min = 400,
         timeoutTime = 0;
 
-    if (isInView) {
-        $blocks.each(function(i,e) {
-            // timeoutTime = Math.floor(Math.random() * (max - min + 1)) + min;
-            timeoutTime = timeoutTime + 400;
+    $blocks.each(function(i,e) {
+        if (isAnyPartOfElementInViewport(e)) {
+            timeoutTime = timeoutTime + 200;
             setTimeout(function() {
                 $(e).addClass('animate');
             },timeoutTime)
-        });
-    } else {
-        timeoutTime = 0;
-        $blocks.each(function(i,e) {
-            $(e).removeClass('animate');
-        });
-    }
+        }
+    });
 }
 
 function rotateGraphs(shouldHalt) {
@@ -105,19 +99,26 @@ function animateGraphBullets(isInView) {
 }
 
 $(function(){
+
     $(window).on('DOMContentLoaded load resize scroll', function() {
-        if (isAnyPartOfElementInViewport($('.social-media')[0])) {
-            animateSocialSection(true);
+        if (isAnyPartOfElementInViewport($('.home-video__cta--butons')[0])) {
+            $('.home-video__cta--butons img').addClass('animate');
         } else {
-            animateSocialSection(false);
+            $('.home-video__cta--butons img').removeClass('animate');
         }
+    });
+
+    $(window).on('DOMContentLoaded load resize scroll', function() {
+        // if (isAnyPartOfElementInViewport($('.social-media')[0])) {
+        //     animateSocialSection(true);
+        // } else {
+        //     animateSocialSection(false);
+        // }
     });
 
     $(window).on('DOMContentLoaded load resize scroll', function() {
         if (isAnyPartOfElementInViewport($('.tokenization__row')[0])) {
             animateTokenSection(true);
-        } else {
-            animateTokenSection(false);
         }
     });
 

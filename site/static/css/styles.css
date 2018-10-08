@@ -89,16 +89,16 @@ table {
 }
 @-webkit-keyframes bouncey {
   0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  25% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  75% {
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
   100% {
     -webkit-transform: scale(1);
@@ -107,16 +107,16 @@ table {
 }
 @keyframes bouncey {
   0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  25% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  75% {
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
   100% {
     -webkit-transform: scale(1);
@@ -726,8 +726,27 @@ body {
   opacity: 0.8;
 }
 .home-video__cta--butons img {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
   display: block;
   margin: 0 auto 50px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.home-video__cta--butons img.animate {
+  -webkit-animation-name: bouncey;
+  animation-name: bouncey;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .home-video__container {
@@ -1296,11 +1315,6 @@ body {
   position: absolute;
   top: 186px;
   right: 0px;
-  -webkit-transform: translateX(1000px);
-  -ms-transform: translateX(1000px);
-  transform: translateX(1000px);
-}
-.social-media__tag.-leaks.animate {
   -webkit-animation-name: floating;
   animation-name: floating;
   -webkit-animation-duration: 2.6s;
@@ -1323,11 +1337,6 @@ body {
   position: absolute;
   right: 0px;
   top: 78px;
-  -webkit-transform: translateX(1000px);
-  -ms-transform: translateX(1000px);
-  transform: translateX(1000px);
-}
-.social-media__tag.-brother.animate {
   -webkit-animation-name: floating;
   animation-name: floating;
   -webkit-animation-duration: 2.5s;
@@ -1336,6 +1345,8 @@ body {
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 @media (max-width: 1150px) {
   .social-media__tag.-brother {
@@ -1351,11 +1362,6 @@ body {
   position: absolute;
   right: 0px;
   top: 296px;
-  -webkit-transform: translateX(1000px);
-  -ms-transform: translateX(1000px);
-  transform: translateX(1000px);
-}
-.social-media__tag.-fakenews.animate {
   -webkit-animation-name: floating;
   animation-name: floating;
   -webkit-animation-duration: 2.4s;
@@ -1458,18 +1464,15 @@ body {
 }
 
 .tokenization__col {
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   float: left;
   width: 33.3%;
   padding: 0 10px 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   opacity: 0;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
 }
 @media (max-width: 1300px) {
   .tokenization__col {
@@ -1483,20 +1486,6 @@ body {
 }
 .tokenization__col.animate {
   opacity: 1;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-animation-name: bouncey;
-  animation-name: bouncey;
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
 }
 
 .tokenization__col--inner {

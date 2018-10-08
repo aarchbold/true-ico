@@ -71,13 +71,13 @@ table {
 }
 @keyframes bouncey {
   0% {
-    transform: scale(1);
+    transform: scale(0.95);
   }
   25% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   75% {
-    transform: scale(0.95);
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
@@ -619,8 +619,17 @@ body {
   opacity: 0.8;
 }
 .home-video__cta--butons img {
+  transition: all 0.4s;
   display: block;
   margin: 0 auto 50px;
+  transform: scale(1);
+}
+.home-video__cta--butons img.animate {
+  animation-name: bouncey;
+  animation-duration: 0.4s;
+  animation-iteration-count: 2;
+  animation-delay: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .home-video__container {
@@ -1173,9 +1182,6 @@ body {
   position: absolute;
   top: 186px;
   right: 0px;
-  transform: translateX(1000px);
-}
-.social-media__tag.-leaks.animate {
   animation-name: floating;
   animation-duration: 2.6s;
   animation-iteration-count: infinite;
@@ -1192,13 +1198,11 @@ body {
   position: absolute;
   right: 0px;
   top: 78px;
-  transform: translateX(1000px);
-}
-.social-media__tag.-brother.animate {
   animation-name: floating;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  animation-delay: 0.6s;
 }
 @media (max-width: 1150px) {
   .social-media__tag.-brother {
@@ -1212,9 +1216,6 @@ body {
   position: absolute;
   right: 0px;
   top: 296px;
-  transform: translateX(1000px);
-}
-.social-media__tag.-fakenews.animate {
   animation-name: floating;
   animation-duration: 2.4s;
   animation-iteration-count: infinite;
@@ -1312,13 +1313,12 @@ body {
 }
 
 .tokenization__col {
-  transition: all 0.2s;
+  transition: all 0.5s;
   float: left;
   width: 33.3%;
   padding: 0 10px 20px;
   box-sizing: border-box;
   opacity: 0;
-  transform: scale(0);
 }
 @media (max-width: 1300px) {
   .tokenization__col {
@@ -1332,12 +1332,6 @@ body {
 }
 .tokenization__col.animate {
   opacity: 1;
-  transform: scale(1);
-  animation-name: bouncey;
-  animation-duration: 0.4s;
-  animation-iteration-count: 1;
-  animation-delay: 0.2s;
-  transition-timing-function: ease-in-out;
 }
 
 .tokenization__col--inner {
