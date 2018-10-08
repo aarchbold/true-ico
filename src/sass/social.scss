@@ -142,23 +142,38 @@
         display: block;
     }
     &.-leaks {
+        transition: all 0.3s;
         position: absolute;
-        top: 224px;
-        transform: translateY(-50%);
+        top: 186px;
         right: 0px;
+        transform: translateX(1000px);
+        &.animate {
+            animation-name: floating;
+            animation-duration: 2.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
         @media (max-width: $breakpoint-tablet) {
             // top: 47%;
             // right: 0px;
         }
         @media (max-width: $breakpoint-cyclist) {
             right: -20px;
-            top: 160px;
+            top: 130px;
         }
     }
     &.-brother {
+        transition: all 0.3s;
         position: absolute;
         right: 0px;
         top: 78px;
+        transform: translateX(1000px);
+        &.animate {
+            animation-name: floating;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
         @media (max-width: $breakpoint-tablet) {
             // right: 0px;
             // top: 62px;
@@ -170,9 +185,17 @@
         }
     }
     &.-fakenews {
+        transition: all 0.3s;
         position: absolute;
         right: 0px;
         top: 296px;
+        transform: translateX(1000px);
+        &.animate {
+            animation-name: floating;
+            animation-duration: 2.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
         @media (max-width: $breakpoint-tablet) {
             // right: 0px;
             // top: 65%;

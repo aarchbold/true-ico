@@ -280,6 +280,9 @@ body {
     z-index: 9000;
     box-sizing: border-box;
     padding: 40px;
+    @media (max-width: $breakpoint-phablet) {
+        padding: 10px;
+    }
 }
 
 .home-video__overlay {
@@ -294,8 +297,8 @@ body {
 
 .home-video__close {
     position: absolute;
-    right: 30px;
-    top: -2px;
+    right: 20px;
+    top: 20px;
     z-index: 1;
     &:after{
         color: white;
@@ -308,16 +311,23 @@ body {
 
 .home-video {
 	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
+	padding-bottom: 53.25%; /* 16:9 */
 	padding-top: 25px;
-	height: 0;
+    height: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .home-video iframe, .home-video video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    transform: translateX(-50%);
 }
 
 .home-body {

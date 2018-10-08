@@ -1,6 +1,12 @@
 // animations styles
 
 
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 6px); }
+    to   { transform: translate(0, 0px); }    
+}
+
 @keyframes shootingStar {
     0% {
         transform: translate(-2000px,1000px)

@@ -58,6 +58,35 @@ table {
   border-spacing: 0;
 }
 
+@-webkit-keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 6px);
+    transform: translate(0, 6px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 6px);
+    transform: translate(0, 6px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+}
 @-webkit-keyframes shootingStar {
   0% {
     -webkit-transform: translate(-2000px, 1000px);
@@ -68,7 +97,6 @@ table {
     transform: translate(3000px, -1000px);
   }
 }
-
 @keyframes shootingStar {
   0% {
     -webkit-transform: translate(-2000px, 1000px);
@@ -677,6 +705,11 @@ body {
   box-sizing: border-box;
   padding: 40px;
 }
+@media (max-width: 600px) {
+  .home-video__container {
+    padding: 10px;
+  }
+}
 
 .home-video__overlay {
   position: absolute;
@@ -690,8 +723,8 @@ body {
 
 .home-video__close {
   position: absolute;
-  right: 30px;
-  top: -2px;
+  right: 20px;
+  top: 20px;
   z-index: 1;
 }
 .home-video__close:after {
@@ -704,18 +737,29 @@ body {
 
 .home-video {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 53.25%;
   /* 16:9 */
   padding-top: 25px;
   height: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .home-video iframe, .home-video video {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
   width: 100%;
   height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .home-body {
@@ -1209,23 +1253,52 @@ body {
   display: block;
 }
 .social-media__tag.-leaks {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   position: absolute;
-  top: 224px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 186px;
   right: 0px;
+  -webkit-transform: translateX(1000px);
+  -ms-transform: translateX(1000px);
+  transform: translateX(1000px);
+}
+.social-media__tag.-leaks.animate {
+  -webkit-animation-name: floating;
+  animation-name: floating;
+  -webkit-animation-duration: 2.6s;
+  animation-duration: 2.6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 @media (max-width: 1150px) {
   .social-media__tag.-leaks {
     right: -20px;
-    top: 160px;
+    top: 130px;
   }
 }
 .social-media__tag.-brother {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   position: absolute;
   right: 0px;
   top: 78px;
+  -webkit-transform: translateX(1000px);
+  -ms-transform: translateX(1000px);
+  transform: translateX(1000px);
+}
+.social-media__tag.-brother.animate {
+  -webkit-animation-name: floating;
+  animation-name: floating;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 @media (max-width: 1150px) {
   .social-media__tag.-brother {
@@ -1235,9 +1308,25 @@ body {
   }
 }
 .social-media__tag.-fakenews {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   position: absolute;
   right: 0px;
   top: 296px;
+  -webkit-transform: translateX(1000px);
+  -ms-transform: translateX(1000px);
+  transform: translateX(1000px);
+}
+.social-media__tag.-fakenews.animate {
+  -webkit-animation-name: floating;
+  animation-name: floating;
+  -webkit-animation-duration: 2.4s;
+  animation-duration: 2.4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 @media (max-width: 1150px) {
   .social-media__tag.-fakenews {
