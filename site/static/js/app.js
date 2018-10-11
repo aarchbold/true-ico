@@ -518,7 +518,7 @@ $(function(){
     var $win = $(window);
 
     $('div.scrollerino').each(function(){
-        var scroll_speed = 4;
+        var scroll_speed = 2;
         var $this = $(this);
         $(window).scroll(function() {
             var bgScroll = (($win.scrollTop() - $this.offset().top)/ scroll_speed);

@@ -644,7 +644,7 @@ body {
 
 .home-container {
   width: 100%;
-  background: #000000 url(../images/bgs/bg-true2.jpg) 50% 50% no-repeat;
+  background: #000000 url(../images/bgs/bg-true2.jpg) 50% 0% no-repeat;
   background-size: cover;
 }
 @media (max-width: 1000px) {
@@ -656,7 +656,6 @@ body {
   .home-container {
     margin-right: 0;
     background-size: auto;
-    background-position: 50% 70%;
   }
 }
 
@@ -1164,9 +1163,20 @@ body {
     margin: 0 40px;
   }
 }
+@media (max-width: 1000px) {
+  .true-value {
+    text-align: center;
+  }
+}
 @media (max-width: 820px) {
   .true-value {
     margin: 0 20px;
+    text-align: left;
+  }
+}
+@media (max-width: 670px) {
+  .true-value {
+    text-align: center;
   }
 }
 
