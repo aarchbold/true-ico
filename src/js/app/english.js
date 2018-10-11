@@ -1,7 +1,6 @@
 var english = {
     header: "Facebook can't be fixed, so we're going to replace it.",
     body1: "What the world needs now is a new generation social media platform that is fundamentally different in it’s incentives. A new kind of mobile community focused on authenticity, intimate sharing and personal data privacy.",
-    body2: "Does this sound right to you? Are you interested in supporting True?",
     body3: "Shortly, we’ll be launching the biggest token sale for a new social media platform in history, led by the biggest names in Silicon Valley.",
     body4: "We already have 2 million users, how would you like to share in our financial success?",
     contact: "Contact Us",
@@ -21,6 +20,7 @@ var english = {
     successbody2: "Have a great day.",
     successbody3: "- The Team @ True",
     submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again.",
+    body2: "Does this sound right to you? Are you interested in supporting True?",
     feature1header: "The promise of social media to connect the whole world was a wonderful idea... but it has failed.",
     feature1body: "In pursuit of growth at all costs, you have become the product. The only way to maintain this growth is through monetizing your personal data.",
     feature2header: "True has an honest data agreement guaranteed by blockchain.",
