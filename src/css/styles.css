@@ -141,9 +141,11 @@ button, .button {
   outline: none;
   border: none;
 }
-button:hover, .button:hover {
-  opacity: 0.9;
-  background-image: linear-gradient(to bottom right, #734CFF, #D97BFF);
+@media (min-width: 820px) {
+  button:hover, .button:hover {
+    opacity: 0.9;
+    background-image: linear-gradient(to bottom right, #734CFF, #D97BFF);
+  }
 }
 
 /* Signup styles

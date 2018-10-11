@@ -17,8 +17,10 @@ button, .button {
     border-radius: 30px;
     outline: none;
     border: none;
-    &:hover {
-        opacity: 0.9;
-        background-image: linear-gradient(to bottom right, $color-button-dark, $color-button-light);
+    @media (min-width: $breakpoint-nav-stack) {
+        &:hover {
+            opacity: 0.9;
+            background-image: linear-gradient(to bottom right, $color-button-dark, $color-button-light);
+        }
     }
 }
