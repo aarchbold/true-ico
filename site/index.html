@@ -21,18 +21,6 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="home-video__container">
-            <div class="home-video__overlay"></div>
-            <a href="#" class="home-video__close"></a>
-            <div class="home-video">
-                <video id="actualVideo" width="560" height="315" controls poster="static/images/poster.jpg">
-                    <source src="static/video/true-intro.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
-                    Your browser does not support the video tag.
-                </video>
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/tZARgdCseRE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-            </div>
-        </div>
         <div class="page-container">
             <div class="language-selector">
                 <div class="language-selector__current">
@@ -75,16 +63,17 @@
                     </h1>
                 </div>
 
-                <div id="videoPop" class="home-video__cta">
-                    <div class="home-video__cta--butons">
-                        <img src="static/images/icons/icon-play-video.png" width="144" />
-                        LEARN HOW  TRUE IS DIFFERENT
-                    </div>
+                <div class="home-video">
+                    <video width="560" height="315" controls poster="static/images/poster.jpg">
+                        <source src="static/video/true-intro.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
 
                 <div class="home-body home-gutters">
                     <p data-text="body1">What the world needs now is a new generation social media platform that is fundamentally different in it’s incentives. A new kind of mobile community focused on authenticity, intimate sharing and personal data privacy.</p>
-                    <p data-text="body2">Are you interested in supporting True?</p>
+                    <p data-text="body2">Does this sound right to you? Are you interested in supporting True?</p>
                     <p data-text="body3">Shortly, we’ll be launching the biggest token sale for a new social media platform in history, led by the biggest names in Silicon Valley.</p>
                     <p data-text="body4">We already have 2 million users, how would you like to share in our financial success?</p>
                 </div>
@@ -148,99 +137,42 @@
                 </div>
                 <img class="home-footer-image" src="static/images/bgs/bg-background-footer.png" width="100%" />
             </div>
-            <div class="social-media">
-                <div class="social-media__row">
-                    <div class="social-media__col">
-                        <h2 data-text="socialheader" class="social-media__header">
-                            WHY IS SOCIAL NETWORKING BROKEN?
-                        </h2>
-                        <p data-text="socialbody">The largest social media platforms have become surveillance empires that prepetually manipulate your attention, secretly harvest your personal data and influence your behavior in order to profit.</p>
-                    </div>
-                    <div class="social-media__col">
-                        <div class="social-media__infographic">
-                            <div class="social-media__tag -brother">
-                                <img src="static/images/icons/icon-eye.svg" />
-                                <strong data-text="socialtag1a">Big Brother</strong>
-                                <span data-text="socialtag1b">Surveillance</span>
-                            </div>
-                            <div class="social-media__tag -leaks">
-                                <img src="static/images/icons/icon-warning.svg" />
-                                <strong data-text="socialtag2a">Privacy</strong>
-                                <span data-text="socialtag2b">Leaks</span>
-                            </div>
-                            <div class="social-media__tag -fakenews">
-                                <img src="static/images/icons/icon-paper.svg" />
-                                <strong data-text="socialtag3a">Influence</strong>
-                                <span data-text="socialtag3b">Fake News</span>
-                            </div>
-                            <img class="cyclist" src="static/images/cyclist.png" />
-                        </div>
-                    </div>
+            
+            <div class="features">
+
+                <div class="features-item">
+                    <h2 class="feature-item__header" data-text="feature1header">The promise of social media to connect the whole world was a wonderful idea… but it has failed.</h2>
+                    <img class="feature-item__image" src="static/images/features/feature-social.png" />
+                    <p class="feature-item__description" data-text="feature1body">In pursuit of growth at all costs, you have become the product. The only way to maintain this growth is through monetizing your personal data.</p>
                 </div>
+
+                <div class="features-item">
+                    <h2 class="feature-item__header" data-text="feature2header">True has an honest data agreement guaranteed by blockchain.</h2>
+                    <img class="feature-item__image" src="static/images/features/feature-blockchain.png" />
+                    <p class="feature-item__description" data-text="feature2body">Our users own and control access to their personal data powered by blockchain technology. We’re building a decentralized system that bakes privacy and trust into our core products.</p>
+                </div>
+
+                <div class="features-item">
+                    <h2 class="feature-item__header" data-text="feature3header">TRU TOKENS</h2>
+                    <img class="feature-item__image" src="static/images/features/feature-tokens.png" />
+                    <p class="feature-item__description" data-text="feature3body">Instead of creating a new cryptocurrency solely for speculation, we're offering tokens to buy lucrative, early, highly in-demand advertising on our growing social network. We accept TRU exclusively as payment for premium advertising on our network.</p>
+                </div>
+
+                <div class="features-item">
+                    <h2 class="feature-item__header" data-text="feature4header">Our users want TRU!</h2>
+                    <img class="feature-item__image" src="static/images/features/feature-users.png" />
+                    <p class="feature-item__description" data-text="feature4body1">True is a real company with a real product, with the best investors in Silicon Valley working today with users on the system. We’re changing the game with an honest solution instead of click-bait soundbite trash and the worst kinds of personal data mining. 
+                        <br /><br />
+                        <span data-text="feature4body2">After this pre-sale, we’re offering TRU to our entire user base, demand and token velocity are likely to be high.</span>
+                    </p>
+                </div>
+
             </div>
 
-            <div class="tokenization">
-                <div class="tokenization-header">
-                    <h2 data-text="tokenheader">
-                        TOKENIZATION WITH TRUE COIN
-                    </h2>
-                    <p data-text="tokenbody">With TrueCoin, the opportunity is not to issue yet-another token, but to re-invent the medium by integrating cryptocurrency and the value of trade at its core.</p>
-                </div>
-                <div class="tokenization__row">
-                    <div class="tokenization__col">
-                        <div class="tokenization__col--inner">
-                            <div class="tokenization__col--img">
-                                <img src="static/images/logos/logo-true-blue.svg" />
-                            </div>
-                            <p data-text="tokentag1">TRUE COIN CAN PERFORM MANY FUNCTIONS</p>
-                        </div>
-                    </div>
-
-                    <div class="tokenization__col">
-                        <div class="tokenization__col--inner">
-                            <div class="tokenization__col--img">
-                                <img src="static/images/icons/icon-work-token.svg" />
-                            </div>
-                            <p data-text="tokentag2">As a work (utility) token, it will handle transaction settlements, rm fundraising and philanthropic engagements</p>
-                        </div>
-                    </div>
-
-                    <div class="tokenization__col">
-                        <div class="tokenization__col--inner">
-                            <div class="tokenization__col--img">
-                                <img src="static/images/icons/icon-discount-token.svg" />
-                            </div>
-                            <p data-text="tokentag3">As discount token it will allow access to paywalls, benefit from price cuts in purchases of products and services, and may alter royalty streams</p>
-                        </div>
-                    </div>
-
-                    <div class="tokenization__col">
-                        <div class="tokenization__col--inner">
-                            <div class="tokenization__col--img">
-                                <img src="static/images/icons/icon-staking-token.svg" />
-                            </div>
-                            <p data-text="tokentag4">As a staking token it may grant the user access to VIP events</p>
-                        </div>
-                    </div>
-
-                    <div class="tokenization__col">
-                        <div class="tokenization__col--inner">
-                            <div class="tokenization__col--img">
-                                <img src="static/images/icons/icon-voting-mechanism.svg" />
-                            </div>
-                            <p data-text="tokentag5">As voting mechanism, will allow users to contribute to the direction of the network’s future development, make community decisions, and become politically involved</p>
-                        </div>
-                    </div>
-
-                    <div class="tokenization__col">
-                        <div class="tokenization__col--inner">
-                            <div class="tokenization__col--img">
-                                <img src="static/images/icons/icon-asset.svg" />
-                            </div>
-                            <p data-text="tokentag6">As an asset, the token may represent blocks of advertising capacity (a futures contract)</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="true-value">
+                <div class="true-value__header" data-text="truevalueheader">The value of TRU is simple to understand - we're offering premium advertising at a massive discount to early investors. </div>
+                <div class="true-value__description" data-text="truevaluebody1">How much longer will crypto investors tolerate being ripped off in scams?</div>
+                <div class="true-value__description" data-text="truevaluebody2">The TRU Token Sale is a premium token offering. We’re offering real value based on a real asset with a proven business model the average investor can understand. It's kind of like owning early shares in Facebook.</div>
             </div>
 
             <div class="roadmap-graphs__container">
@@ -260,6 +192,10 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            <div class="lets-do-this">
+                <h2 data-text="letsdothis">We Can Do This. Are You Interested?</h2>
             </div>
 
             <div class="home-footer home-gutters">

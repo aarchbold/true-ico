@@ -431,7 +431,7 @@ $(function(){
         var $this = $(this);
         $(window).scroll(function() {
             var bgScroll = (($win.scrollTop() - $this.offset().top)/ scroll_speed);
-            var bgPosition = '20% '+ bgScroll + 'px';
+            var bgPosition = '50% '+ bgScroll + 'px';
             $this.css({ backgroundPosition: bgPosition });
         });
     });

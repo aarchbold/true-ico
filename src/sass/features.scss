@@ -1,0 +1,123 @@
+// features section
+
+.features {
+    color: $color-alternate-font;
+    padding: 40px 0;
+    max-width: 880px;
+    margin: 0 auto;
+    line-height: 1.2;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 40px;
+    @media (max-width: $breakpoint-big-screen) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @media (max-width: $breakpoint-nav-stack) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.features-item {
+    transition: all 0.4s;
+    min-height: 224px;
+    position: relative;
+    padding: 0 45% 0 0;
+    margin-bottom: 60px;
+    opacity: 0;
+    &.animate {
+        opacity: 1;
+    }
+    @media (max-width: $breakpoint-nav-slim) {
+        padding: 0;
+        text-align: center;
+    }
+    @media (max-width: $breakpoint-nav-stack) {
+        padding-right: 45%;
+        text-align: left;
+    }
+    @media (max-width: 670px) {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.feature-item__header {
+    font-size: 30px;
+    line-height: 1.2;
+    padding-bottom: 20px;
+}
+.feature-item__description {
+    line-height: 1.4;
+}
+
+.feature-item__image {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-width: 360px;
+    border-radius: 6px;
+    box-shadow: 1px 2px 20px -1px rgba(108,73,255,0.4);
+    @media (max-width: $breakpoint-nav-slim) {
+        position: relative;
+        top: auto;
+        transform: translateY(0);
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    @media (max-width: $breakpoint-nav-stack) {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-width: 360px;
+    }
+    @media (max-width: 670px) {
+        position: relative;
+        top: auto;
+        transform: translateY(0);
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.true-value {
+    color: $color-alternate-font;
+    padding: 80px 0px;
+    max-width: 820px;
+    margin: 0 auto;
+    line-height: 1.2;
+    box-sizing: border-box;
+    border-top: 1px solid $color-footer-font;
+    @media (max-width: $breakpoint-big-screen) {
+        margin: 0 40px;
+    }
+    @media (max-width: $breakpoint-nav-stack) {
+        margin: 0 20px;
+    }
+}
+
+.true-value__header {
+    font-size: 30px;
+    line-height: 1.2;
+    padding-bottom: 40px;
+}
+
+.true-value__description {
+    line-height: 1.4;
+    padding-bottom: 20px;
+}
+
+.lets-do-this {
+    color: $color-alternate-font;
+    padding: 40px 20px;
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.2;
+    }
+}

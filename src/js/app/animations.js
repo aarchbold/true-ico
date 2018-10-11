@@ -12,46 +12,13 @@ function isAnyPartOfElementInViewport(el) {
     return (vertInView && horInView);
 }
 
-function animateSocialSection(isInView) {
-    var $tag1 = $('.social-media__tag.-brother');
-    var $tag2 = $('.social-media__tag.-leaks');
-    var $tag3 = $('.social-media__tag.-fakenews');
-    if (isInView) {
-        $tag1.css('transform','translateX(0)');
-        setTimeout(function() {
-            $tag1.addClass('animate');
-        },300)
-        setTimeout(function() {
-            $tag2.css('transform','translateX(0)');
-            setTimeout(function() {
-                $tag2.addClass('animate');
-            },300)
-        },500)
-        setTimeout(function() {
-            $tag3.css('transform','translateX(0)');
-            setTimeout(function() {
-                $tag3.addClass('animate');
-            },300)
-        },1000)
-    } else {
-        $tag1.css('transform','translateX(1000px)');
-        $tag2.css('transform','translateX(1000px)');
-        $tag3.css('transform','translateX(1000px)');
-        $tag1.removeClass('animate');
-        $tag2.removeClass('animate');
-        $tag3.removeClass('animate');
-    }
-}
-
-function animateTokenSection(isInView) {
-    var $blocks = $('.tokenization__col'),
-        max = 2000,
-        min = 400,
+function animateFeaturesSection() {
+    var $blocks = $('.features-item'),
         timeoutTime = 0;
 
     $blocks.each(function(i,e) {
         if (isAnyPartOfElementInViewport(e)) {
-            timeoutTime = timeoutTime + 200;
+            timeoutTime = timeoutTime + 100;
             setTimeout(function() {
                 $(e).addClass('animate');
             },timeoutTime)
@@ -99,26 +66,9 @@ function animateGraphBullets(isInView) {
 }
 
 $(function(){
-
     $(window).on('DOMContentLoaded load resize scroll', function() {
-        if (isAnyPartOfElementInViewport($('.home-video__cta--butons')[0])) {
-            $('.home-video__cta--butons img').addClass('animate');
-        } else {
-            $('.home-video__cta--butons img').removeClass('animate');
-        }
-    });
-
-    $(window).on('DOMContentLoaded load resize scroll', function() {
-        // if (isAnyPartOfElementInViewport($('.social-media')[0])) {
-        //     animateSocialSection(true);
-        // } else {
-        //     animateSocialSection(false);
-        // }
-    });
-
-    $(window).on('DOMContentLoaded load resize scroll', function() {
-        if (isAnyPartOfElementInViewport($('.tokenization__row')[0])) {
-            animateTokenSection(true);
+        if (isAnyPartOfElementInViewport($('.features')[0])) {
+            animateFeaturesSection(true);
         }
     });
 

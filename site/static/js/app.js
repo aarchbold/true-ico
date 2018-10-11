@@ -12,46 +12,13 @@ function isAnyPartOfElementInViewport(el) {
     return (vertInView && horInView);
 }
 
-function animateSocialSection(isInView) {
-    var $tag1 = $('.social-media__tag.-brother');
-    var $tag2 = $('.social-media__tag.-leaks');
-    var $tag3 = $('.social-media__tag.-fakenews');
-    if (isInView) {
-        $tag1.css('transform','translateX(0)');
-        setTimeout(function() {
-            $tag1.addClass('animate');
-        },300)
-        setTimeout(function() {
-            $tag2.css('transform','translateX(0)');
-            setTimeout(function() {
-                $tag2.addClass('animate');
-            },300)
-        },500)
-        setTimeout(function() {
-            $tag3.css('transform','translateX(0)');
-            setTimeout(function() {
-                $tag3.addClass('animate');
-            },300)
-        },1000)
-    } else {
-        $tag1.css('transform','translateX(1000px)');
-        $tag2.css('transform','translateX(1000px)');
-        $tag3.css('transform','translateX(1000px)');
-        $tag1.removeClass('animate');
-        $tag2.removeClass('animate');
-        $tag3.removeClass('animate');
-    }
-}
-
-function animateTokenSection(isInView) {
-    var $blocks = $('.tokenization__col'),
-        max = 2000,
-        min = 400,
+function animateFeaturesSection() {
+    var $blocks = $('.features-item'),
         timeoutTime = 0;
 
     $blocks.each(function(i,e) {
         if (isAnyPartOfElementInViewport(e)) {
-            timeoutTime = timeoutTime + 200;
+            timeoutTime = timeoutTime + 100;
             setTimeout(function() {
                 $(e).addClass('animate');
             },timeoutTime)
@@ -99,26 +66,9 @@ function animateGraphBullets(isInView) {
 }
 
 $(function(){
-
     $(window).on('DOMContentLoaded load resize scroll', function() {
-        if (isAnyPartOfElementInViewport($('.home-video__cta--butons')[0])) {
-            $('.home-video__cta--butons img').addClass('animate');
-        } else {
-            $('.home-video__cta--butons img').removeClass('animate');
-        }
-    });
-
-    $(window).on('DOMContentLoaded load resize scroll', function() {
-        // if (isAnyPartOfElementInViewport($('.social-media')[0])) {
-        //     animateSocialSection(true);
-        // } else {
-        //     animateSocialSection(false);
-        // }
-    });
-
-    $(window).on('DOMContentLoaded load resize scroll', function() {
-        if (isAnyPartOfElementInViewport($('.tokenization__row')[0])) {
-            animateTokenSection(true);
+        if (isAnyPartOfElementInViewport($('.features')[0])) {
+            animateFeaturesSection(true);
         }
     });
 
@@ -572,7 +522,7 @@ $(function(){
         var $this = $(this);
         $(window).scroll(function() {
             var bgScroll = (($win.scrollTop() - $this.offset().top)/ scroll_speed);
-            var bgPosition = '20% '+ bgScroll + 'px';
+            var bgPosition = '50% '+ bgScroll + 'px';
             $this.css({ backgroundPosition: bgPosition });
         });
     });
@@ -627,7 +577,7 @@ var chinese = {
 var english = {
     header: "Facebook can't be fixed, so we're going to replace it.",
     body1: "What the world needs now is a new generation social media platform that is fundamentally different in it’s incentives. A new kind of mobile community focused on authenticity, intimate sharing and personal data privacy.",
-    body2: "Are you interested in supporting True?",
+    body2: "Does this sound right to you? Are you interested in supporting True?",
     body3: "Shortly, we’ll be launching the biggest token sale for a new social media platform in history, led by the biggest names in Silicon Valley.",
     body4: "We already have 2 million users, how would you like to share in our financial success?",
     contact: "Contact Us",
@@ -647,31 +597,19 @@ var english = {
     successbody2: "Have a great day.",
     successbody3: "- The Team @ True",
     submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again.",
-    socialheader: "WHY IS SOCIAL NETWORKING BROKEN?",
-    socialbody: "The largest social media platforms have become surveillance empires that prepetually manipulate your attention, secretly harvest your personal data and influence your behavior in order to profit.",
-    socialtag1a: "Big Brother",
-    socialtag1b: "Surveillance",
-    socialtag2a: "Privacy",
-    socialtab2b: "Leaks",
-    socialtag3a: "Influence",
-    socialtab3b: "Fake News",
-    tokenheader: "TOKENIZATION WITH TRUE COIN",
-    tokenbody: "With TrueCoin, the opportunity is not to issue yet-another token, but to re-invent the medium by integrating cryptocurrency and the value of trade at its core.",
-    tokentag1: "TRUE COIN CAN PERFORM MANY FUNCTIONS",
-    tokentag2: "As a work (utility) token, it will handle transaction settlements, rm fundraising and philanthropic engagements",
-    tokentag3: "As discount token it will allow access to paywalls, benefit from price cuts in purchases of products and services, and may alter royalty streams",
-    tokentag4: "As a staking token it may grant the user access to VIP events",
-    tokentag5: "As voting mechanism, will allow users to contribute to the direction of the network’s future development, make community decisions, and become politically involved",
-    tokentag6: "As an asset, the token may represent blocks of advertising capacity (a futures contract)",
-    distributionheader: "TOKEN DISTRIBUTION",
-    distributionbullet1: "35% PUBLIC SALE (ICO)",
-    distributionbullet2: "20% RESERVE POOL",
-    distributionbullet3: "15% TEAM",
-    distributionbullet4: "15% NETWORK GROWTH",
-    distributionbullet5: "10% AIR DROPS/BIZ DEV",
-    distributionbullet6: "5% ADVISORS, CONSULTANTS, PARTNERS",
-    videoprompt: "LEARN HOW TRUE IS DIFFERENT",
-    footercta: "Learn More"
+    feature1header: "The promise of social media to connect the whole world was a wonderful idea... but it has failed.",
+    feature1body: "In pursuit of growth at all costs, you have become the product. The only way to maintain this growth is through monetizing your personal data.",
+    feature2header: "True has an honest data agreement guaranteed by blockchain.",
+    feature2body: "Our users own and control access to their personal data powered by blockchain technology. We’re building a decentralized system that bakes privacy and trust into our core products.",
+    feature3header: "TRU TOKENS",
+    feature3body: "Instead of creating a new cryptocurrency solely for speculation, we're offering tokens to buy lucrative, early, highly in-demand advertising on our growing social network. We accept TRU exclusively as payment for premium advertising on our network.",
+    feature4header: "Our users want TRU!",
+    feature4body1: "True is a real company with a real product, with the best investors in Silicon Valley working today with users on the system. We’re changing the game with an honest solution instead of click-bait soundbite trash and the worst kinds of personal data mining.",
+    feature4body2: "After this pre-sale, we’re offering TRU to our entire user base, demand and token velocity are likely to be high.",
+    truevalueheader: "The value of TRU is simple to understand - we're offering premium advertising at a massive discount to early investors.",
+    truevaluebody1: "How much longer will crypto investors tolerate being ripped off in scams?",
+    truevaluebody2: "The TRU Token Sale is a premium token offering. We’re offering real value based on a real asset with a proven business model the average investor can understand. It's kind of like owning early shares in Facebook.",
+    letsdothis: "We Can Do This. Are You Interested?"
 }
 var japanese = {
     header: "フェイスブックは修正できないので、私たちが代替します。",
