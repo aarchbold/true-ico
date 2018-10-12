@@ -468,12 +468,18 @@ $.fn.handleMobileFooter = function() {
         $button = $('#footerCta', $container),
         $form = $('.home-signup'),
         $formClose = $('.home-signup__close'),
-        isScrolling;
+        isScrolling,
+        scrollLength = 0,
+        scrollBuffer = 300,
+        currentScrollLength = 0;
     $(window).scroll(function() {
-        $container.addClass('-hide');
+        if (($(window).scrollTop() > (scrollLength + scrollBuffer)) || ($(window).scrollTop() < (scrollLength - scrollBuffer))) {
+            console.log('hide footer');
+            $container.addClass('-hide');
+        }
         window.clearTimeout(isScrolling);
         isScrolling = setTimeout(function() {
-            console.log('Scrolling has stopped.');
+            scrollLength = $(window).scrollTop();
             $container.removeClass('-hide');
         }, 200);
     });
