@@ -20,6 +20,13 @@ var korean = {
     successbody2: "좋은하루 보내세요.",
     successbody3: "- TRUE 팀 드림",
     submissionerrormssg: "귀하의 데이터를 확인할 수 없습니다. 정보를 확인하고 다시 시도하십시오.",
+    distributionheader: "TOKEN DISTRIBUTION",
+    distributionbullet1: "35% PUBLIC SALE (ICO)",
+    distributionbullet2: "20% RESERVE POOL",
+    distributionbullet3: "15% TEAM",
+    distributionbullet4: "15% NETWORK GROWTH",
+    distributionbullet5: "10% AIR DROPS/BIZ DEV",
+    distributionbullet6: "5% ADVISORS, CONSULTANTS, PARTNERS",
     body2: "Does this sound right to you? Are you interested in supporting True?",
     feature1header: "The promise of social media to connect the whole world was a wonderful idea... but it has failed.",
     feature1body: "In pursuit of growth at all costs, you have become the product. The only way to maintain this growth is through monetizing your personal data.",
@@ -33,5 +40,6 @@ var korean = {
     truevalueheader: "The value of TRU is simple to understand - we're offering premium advertising at a massive discount to early investors.",
     truevaluebody1: "How much longer will crypto investors tolerate being ripped off in scams?",
     truevaluebody2: "The TRU Token Sale is a premium token offering. We’re offering real value based on a real asset with a proven business model the average investor can understand. It's kind of like owning early shares in Facebook.",
-    letsdothis: "We Can Do This. Are You Interested?"
+    letsdothis: "We Can Do This. Are You Interested?",
+    signupprompt: "I'm Insterested"
 }
