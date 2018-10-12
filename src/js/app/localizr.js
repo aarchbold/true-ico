@@ -63,6 +63,7 @@ $.fn.localizr = function() {
     });
 
     $languages.click(function(e) {
+        e.preventDefault();
         var currentLang = $(e.target).data('language');
         localStorage.setItem('trueLanguage2',currentLang);
         handleLocalizaion(currentLang);
