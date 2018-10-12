@@ -79,7 +79,7 @@ $(function(){
                 rotateGraphs();
             }
             isRotating = true;
-            animateGraphBullets(true);
+            // animateGraphBullets(true);
             $('.roadmap-graphs__svg--holder').addClass('animate');
         } else {
             isRotating = false;

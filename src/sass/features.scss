@@ -31,15 +31,12 @@
     }
     @media (max-width: $breakpoint-nav-slim) {
         padding: 0;
-        text-align: center;
     }
     @media (max-width: $breakpoint-nav-stack) {
         padding-right: 45%;
-        text-align: left;
     }
     @media (max-width: 670px) {
         padding: 0;
-        text-align: center;
     }
 }
 
@@ -96,15 +93,8 @@
     @media (max-width: $breakpoint-big-screen) {
         margin: 0 40px;
     }
-    @media (max-width: $breakpoint-nav-slim) {
-        text-align: center;
-    }
     @media (max-width: $breakpoint-nav-stack) {
         margin: 0 20px;
-        text-align: left;
-    }
-    @media (max-width: 670px) {
-        text-align: center;
     }
 }
 

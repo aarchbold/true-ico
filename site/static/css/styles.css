@@ -1078,19 +1078,16 @@ body {
 @media (max-width: 1000px) {
   .features-item {
     padding: 0;
-    text-align: center;
   }
 }
 @media (max-width: 820px) {
   .features-item {
     padding-right: 45%;
-    text-align: left;
   }
 }
 @media (max-width: 670px) {
   .features-item {
     padding: 0;
-    text-align: center;
   }
 }
 
@@ -1167,20 +1164,9 @@ body {
     margin: 0 40px;
   }
 }
-@media (max-width: 1000px) {
-  .true-value {
-    text-align: center;
-  }
-}
 @media (max-width: 820px) {
   .true-value {
     margin: 0 20px;
-    text-align: left;
-  }
-}
-@media (max-width: 670px) {
-  .true-value {
-    text-align: center;
   }
 }
 
@@ -1326,9 +1312,6 @@ body {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  -webkit-transform: translateX(1000px);
-  -ms-transform: translateX(1000px);
-  transform: translateX(1000px);
 }
 .roadmap-graphs__item.animate {
   -webkit-transform: translateX(0);

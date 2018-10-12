@@ -102,7 +102,7 @@
 
 .roadmap-graphs__item {
     transition: all 0.3s;
-    transform: translateX(1000px);
+    //transform: translateX(1000px);
     &.animate {
         transform: translateX(0);
     }
