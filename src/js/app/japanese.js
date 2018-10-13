@@ -41,5 +41,5 @@ var japanese = {
     truevaluebody1: "How much longer will crypto investors tolerate being ripped off in scams?",
     truevaluebody2: "The TRU Token Sale is a premium token offering. We’re offering real value based on a real asset with a proven business model the average investor can understand. It's kind of like owning early shares in Facebook.",
     letsdothis: "We Can Do This. Are You Interested?",
-    signupprompt: "I'm Insterested"
+    signupprompt: "I'm Interested"
 }

@@ -32,7 +32,7 @@ var english = {
     feature1body: "In pursuit of growth at all costs, you have become the product. The only way to maintain this growth is through monetizing your personal data.",
     feature2header: "True has an honest data agreement guaranteed by blockchain.",
     feature2body: "Our users own and control access to their personal data powered by blockchain technology. We’re building a decentralized system that bakes privacy and trust into our core products.",
-    feature3header: "TRU TOKENS",
+    feature3header: "Tru Tokens",
     feature3body: "Instead of creating a new cryptocurrency solely for speculation, we're offering tokens to buy lucrative, early, highly in-demand advertising on our growing social network. We accept TRU exclusively as payment for premium advertising on our network.",
     feature4header: "Our users want TRU!",
     feature4body1: "True is a real company with a real product, with the best investors in Silicon Valley working today with users on the system. We’re changing the game with an honest solution instead of click-bait soundbite trash and the worst kinds of personal data mining.",
@@ -41,5 +41,5 @@ var english = {
     truevaluebody1: "How much longer will crypto investors tolerate being ripped off in scams?",
     truevaluebody2: "The TRU Token Sale is a premium token offering. We’re offering real value based on a real asset with a proven business model the average investor can understand. It's kind of like owning early shares in Facebook.",
     letsdothis: "We Can Do This. Are You Interested?",
-    signupprompt: "I'm Insterested"
+    signupprompt: "I'm Interested"
 }
