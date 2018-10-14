@@ -25,10 +25,10 @@
     position: relative;
     padding: 0 45% 0 0;
     margin-bottom: 60px;
-    opacity: 0;
-    &.animate {
-        opacity: 1;
-    }
+    // opacity: 0;
+    // &.animate {
+    //     opacity: 1;
+    // }
     @media (max-width: $breakpoint-nav-slim) {
         padding: 0;
     }

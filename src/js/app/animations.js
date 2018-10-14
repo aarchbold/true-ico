@@ -106,11 +106,11 @@ $.fn.handleAnimatedText = function() {
 }
 
 $(function(){
-    $(window).on('DOMContentLoaded load resize scroll', function() {
-        if (isAnyPartOfElementInViewport($('.features')[0])) {
-            animateFeaturesSection(true);
-        }
-    });
+    // $(window).on('DOMContentLoaded load resize scroll', function() {
+    //     if (isAnyPartOfElementInViewport($('.features')[0])) {
+    //         animateFeaturesSection(true);
+    //     }
+    // });
 
     var isRotating = false;
     $(window).on('DOMContentLoaded load resize scroll', function() {
@@ -123,7 +123,7 @@ $(function(){
             $('.roadmap-graphs__svg--holder').addClass('animate');
         } else {
             isRotating = false;
-            animateGraphBullets(false);
+            // animateGraphBullets(false);
             $('.roadmap-graphs__svg--holder').removeClass('animate');
         }
     });
