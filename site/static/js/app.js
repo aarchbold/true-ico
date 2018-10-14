@@ -65,6 +65,46 @@ function animateGraphBullets(isInView) {
     }
 }
 
+$.fn.handleAnimatedText = function() {
+    var $context = $(this),
+        $textBlocks = $('.text-animation', $context),
+        position = $(window).scrollTop();
+
+    $textBlocks.each(function(i,e) {
+        $(e).addClass('animate');
+        $(window).on('scroll', function() {
+            if (isAnyPartOfElementInViewport($(e)[0])) {
+                $(e).removeClass('animate');
+            } else {
+                $(e).addClass('animate');
+            }
+        });
+    });
+
+
+    // console.log('animate the text');
+    // $(window).on('scroll', function() {
+    //     var scroll = $(window).scrollTop(),
+    //         isScrolling,
+    //         delay = 0;
+    //     if (scroll > position) {
+    //         $textBlocks.each(function(i,e) {
+    //             delay = delay + 100;
+    //             setTimeout(function() {
+    //                 $(e).addClass('animate');
+    //             },delay)
+    //         })
+    //     }
+    //     window.clearTimeout(isScrolling);
+    //     isScrolling = setTimeout(function() {
+    //         $textBlocks.each(function(i,e) {
+    //             $(e).removeClass('animate');
+    //         })
+    //     }, 1000);
+    //     position = scroll;
+    // });
+}
+
 $(function(){
     $(window).on('DOMContentLoaded load resize scroll', function() {
         if (isAnyPartOfElementInViewport($('.features')[0])) {
@@ -88,6 +128,9 @@ $(function(){
         }
     });
 
+    // detect scroll down
+    // home-title
+    $('.text-animation-group').handleAnimatedText();
 });
 function getParam(name) {
     SCH = document.location.search;

@@ -1,5 +1,12 @@
 // animations styles
 
+.text-animation {
+    transition: all 0.3s;
+    transform: translateY(0);
+    &.animate {
+        transform: translateY(100px);
+    }
+}
 
 @keyframes floating {
     from { transform: translate(0,  0px); }

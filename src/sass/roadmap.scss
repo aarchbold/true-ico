@@ -103,9 +103,9 @@
 .roadmap-graphs__item {
     transition: all 0.3s;
     //transform: translateX(1000px);
-    &.animate {
-        transform: translateX(0);
-    }
+    // &.animate {
+    //     transform: translateX(0);
+    // }
     &.-red {
         &:before {
             border: 3px solid #FF496F;

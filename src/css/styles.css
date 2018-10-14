@@ -58,6 +58,14 @@ table {
   border-spacing: 0;
 }
 
+.text-animation {
+  transition: all 0.3s;
+  transform: translateY(0);
+}
+.text-animation.animate {
+  transform: translateY(100px);
+}
+
 @keyframes floating {
   from {
     transform: translate(0, 0px);
@@ -1185,9 +1193,6 @@ body {
 
 .roadmap-graphs__item {
   transition: all 0.3s;
-}
-.roadmap-graphs__item.animate {
-  transform: translateX(0);
 }
 .roadmap-graphs__item.-red:before {
   border: 3px solid #FF496F;
