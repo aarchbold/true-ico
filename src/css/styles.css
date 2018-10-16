@@ -59,7 +59,7 @@ table {
 }
 
 .text-animation {
-  transition: all 0.45s;
+  transition: all 0.55s;
   transform: translateY(0);
   opacity: 1;
 }

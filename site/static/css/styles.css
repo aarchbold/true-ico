@@ -59,9 +59,9 @@ table {
 }
 
 .text-animation {
-  -webkit-transition: all 0.45s;
-  -o-transition: all 0.45s;
-  transition: all 0.45s;
+  -webkit-transition: all 0.55s;
+  -o-transition: all 0.55s;
+  transition: all 0.55s;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
