@@ -33,13 +33,13 @@ var english = {
     feature2header: "True has an honest data agreement guaranteed by blockchain.",
     feature2body: "Our users own and control access to their personal data powered by blockchain technology. We’re building a decentralized system that bakes privacy and trust into our core products.",
     feature3header: "Tru Tokens",
-    feature3body: "Instead of creating a new cryptocurrency solely for speculation, we're offering tokens to buy lucrative, early, highly in-demand advertising on our growing social network. We accept TRU exclusively as payment for premium advertising on our network.",
+    feature3body: "Instead of creating a new cryptocurrency solely for speculation, we're creating a new social media economy. Leveraging 2M growing users at scale, True will become the largest active social network in the world to implement an end-to-end decentralized privacy solution.",
     feature4header: "Our users want TRU!",
-    feature4body1: "True is a real company with a real product, with the best investors in Silicon Valley working today with users on the system. We’re changing the game with an honest solution instead of click-bait soundbite trash and the worst kinds of personal data mining.",
+    feature4body1: "True has already raised $10M in venture capital and is a real company with a real product, with the best investors in Silicon Valley working today with users on the system. We’re changing the game with an honest solution instead of click-bait soundbite trash and the worst kinds of personal data mining.",
     feature4body2: "After this pre-sale, we’re offering TRU to our entire user base, demand and token velocity are likely to be high.",
-    truevalueheader: "The value of TRU is simple to understand - we're offering premium advertising at a massive discount to early investors.",
+    truevalueheader: "The value of TRU is simple to understand - we're offering a chance to own the currency that powers the next Facebook at a massive discount.",
     truevaluebody1: "How much longer will crypto investors tolerate being ripped off in scams?",
-    truevaluebody2: "The TRU Token Sale is a premium token offering. We’re offering real value based on a real asset with a proven business model the average investor can understand. It's kind of like owning early shares in Facebook.",
+    truevaluebody2: "The TRU Token Sale is a premium token offering. We’re offering real value based on a proven business model the average investor can understand. TRU can be used exclusively to buy advertising, subcriptions and premium goods and services on True the same way as $Dollars, ¥Yuan, ₩Won, ¥Yen or €Euros. It's kind of like owning early shares in Facebook.",
     letsdothis: "We Can Do This. Are You Interested?",
     signupprompt: "I'm Interested"
 }
