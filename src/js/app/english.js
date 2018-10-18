@@ -32,7 +32,7 @@ var english = {
     feature1body: "In pursuit of growth at all costs, you have become the product. The only way to maintain this growth is through monetizing your personal data.",
     feature2header: "True has an honest data agreement guaranteed by blockchain.",
     feature2body: "Our users own and control access to their personal data powered by blockchain technology. We’re building a decentralized system that bakes privacy and trust into our core products.",
-    feature3header: "Tru Tokens",
+    feature3header: "TRU Tokens",
     // updated
     feature3body: "Instead of creating a new cryptocurrency solely for speculation, we're creating a new social media economy. Leveraging 2M growing users at scale, True will become the largest active social network in the world to implement an end-to-end decentralized privacy solution.",
     feature4header: "Our users want TRU!",
