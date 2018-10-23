@@ -605,7 +605,7 @@ var chinese = {
     distributionbullet4: "15%网络增长",
     distributionbullet5: "10%空投/商务拓展",
     distributionbullet6: "5%咨询顾问，顾问，合作伙伴",
-	body2: "Does this sound right to you? Are you interested in supporting True?",
+	body2: "听起来怎样？您对支持True有兴趣吗？",
     feature1header: "用社交媒体连接世界的承诺是很棒的主意，但是它失败了",
     feature1body: "在不惜一切代价追求成长的过程中，你已经成为了产品。唯一的保持增长势头的方式就是将您的个人数据货币化",
     feature2header: "True有经过区块链保障的实实在在的数据协议。",
