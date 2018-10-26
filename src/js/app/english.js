@@ -46,5 +46,6 @@ var english = {
     // updated
     truevaluebody2: "The TRU Token Sale is a premium token offering. We’re offering real value based on a proven business model the average investor can understand. TRU can be used exclusively to buy advertising, subcriptions and premium goods and services on True the same way as $Dollars, ¥Yuan, ₩Won, ¥Yen or €Euros. It's kind of like owning early shares in Facebook.",
     letsdothis: "We Can Do This. Are You Interested?",
-    signupprompt: "I'm Interested"
+    signupprompt: "I'm Interested",
+    spinnertext: "Guaranteeing your discount..."
 }

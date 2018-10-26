@@ -619,7 +619,8 @@ var chinese = {
     truevaluebody1: "加密投资者还能忍诈骗多久？",
     truevaluebody2: "TRU代币销售提供给您的是一个获得高级代币的机会。我们提供给您的是基于普通投资者可以理解的成熟商业模式的真正价值。 TRU可以像美元，人民币，韩元，日元或欧元一样，专门用在True上购买广告，订阅，优质商品和服务。拥有TRU代币就像拥有Facebook的早期股票一样。",
     letsdothis: "我们能做到。您有兴趣吗？",
-    signupprompt: "我有兴趣。"
+    signupprompt: "我有兴趣。",
+    spinnertext: "您的折扣是有保证的"
 }
 var english = {
     header: "Facebook can't be fixed, so we're going to replace it.",
@@ -669,7 +670,8 @@ var english = {
     // updated
     truevaluebody2: "The TRU Token Sale is a premium token offering. We’re offering real value based on a proven business model the average investor can understand. TRU can be used exclusively to buy advertising, subcriptions and premium goods and services on True the same way as $Dollars, ¥Yuan, ₩Won, ¥Yen or €Euros. It's kind of like owning early shares in Facebook.",
     letsdothis: "We Can Do This. Are You Interested?",
-    signupprompt: "I'm Interested"
+    signupprompt: "I'm Interested",
+    spinnertext: "Guaranteeing your discount..."
 }
 var japanese = {
     header: "フェイスブックは修正できないので、私たちが代替します。",
@@ -714,7 +716,8 @@ var japanese = {
     truevaluebody1: "暗号投資家は詐欺にどれくらいの時間をかけて逃れることができますか？",
     truevaluebody2: "TRUトークンセールはプレミアムトークンです。私たちは、平均的な投資家が理解できる実績のあるビジネスモデルに基づいて真の価値を提供しています。 TRUは、ドル、円、円、円、ユーロ、ユーロと同様に、広告、購読、プレミアム商品およびサービスをTrueで購入するためにのみ使用することができます。 Facebookの初期株式を所有するようなものだ。",
     letsdothis: "これはすることができます。興味がありますか？",
-    signupprompt: "興味があります。"
+    signupprompt: "興味があります。",
+    spinnertext: "保証割引"
 }
 var korean = {
     header: "페이스북의 문제점은 쉽게 고쳐질수 없습니다, 그래서 저희가 그 역활을 대신하고자 합니다.",
@@ -759,7 +762,8 @@ var korean = {
     truevaluebody1: "암호화폐 투자자들이 스캠을 얼마나 더 견딜 수 있을까요?",
     truevaluebody2: "TRU 토큰세일은 프리미엄 토큰 제안입니다. 일반 투자자가 이해할 수 있는 검증된 비즈니스 모델을 가지고 있는 실제 자산을 기반으로 진정한 가치를 제공합니다. TRU는 광고 구매, 구독, 프리미엄 상품과 서비스를 미국달러, 중국위완화, 한국원화, 일본엔화 또는 유로로 구매하는 것과 동일한 방식과 같이 True로 구매할 수 있습니다. 이것은 페이스북 초창기때의 주식을 갖고 있는 것과 같습니다.",
     letsdothis: "우리는 할 수 있습니다. 관심이 있으신가요?",
-    signupprompt: "관심이 있습니다"
+    signupprompt: "관심이 있습니다",
+    spinnertext: "보장 된 할인"
 }
 function handleLocalizaion(language) {
     var currentLang;
@@ -900,7 +904,8 @@ var russian = {
     truevaluebody1: "Сколько можно попадаться на удочку крипто-мошенников?",
     truevaluebody2: "Продажа токенов TRU - уникальное событие. Их ценность обеспечена работающей бизнес-моделью, которую легко понять простому инвестору. Токены можно использовать исключительно для размещения рекламы, приобретения подписок и других платных услуг, предоставляемых нашей социальной сетью. Покупку TRU можно сравнить с приобретением акций Facebook на заре его истории.",
     letsdothis: "Мы сможем это сделать. Присоединяйтесь!",
-    signupprompt: "Мне это интересно!"
+    signupprompt: "Мне это интересно!",
+    spinnertext: "Обработка платежа"
 }
 $.fn.handleVideo= function() {
     var $launcher = $('.home-video__cta--butons', $(this)),

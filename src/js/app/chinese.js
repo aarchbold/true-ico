@@ -41,5 +41,6 @@ var chinese = {
     truevaluebody1: "加密投资者还能忍诈骗多久？",
     truevaluebody2: "TRU代币销售提供给您的是一个获得高级代币的机会。我们提供给您的是基于普通投资者可以理解的成熟商业模式的真正价值。 TRU可以像美元，人民币，韩元，日元或欧元一样，专门用在True上购买广告，订阅，优质商品和服务。拥有TRU代币就像拥有Facebook的早期股票一样。",
     letsdothis: "我们能做到。您有兴趣吗？",
-    signupprompt: "我有兴趣。"
+    signupprompt: "我有兴趣。",
+    spinnertext: "您的折扣是有保证的"
 }
