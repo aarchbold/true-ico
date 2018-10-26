@@ -211,27 +211,29 @@
         <div class="mobile-form-cta">
             <a id="footerCta" href="#" data-text="signupprompt" class="button button-signup">I'm Interested</a>
         </div>
+        <script type="text/javascript">
+            function handleLeadConversion(email_addr) {
+                var data = {
+                    em: email_addr,
+                    source: 'truetokensale.com',
+                    unid: $("#form-version-code").val() + "-" + new Date().getTime(),
+                    detail: "LANG=" + localStorage.getItem('trueLanguage')
+                    + "|CURR=" + $("#signupCurrency").val()
+                    + "|RANGE=" + $("#signupCurrencyRange").val()
+                    + "|FN=" + $("#formFirstName").val()
+                    + "|LN=" + $("#formLastName").val()
+                    + "|EM=" + $("#formEmail").val()
+                    ,
+
+                    a: 1
+                };
+                return trackLead(data);
+            }
+            /* alert('i set up function handleLeadConversion'); */
+
+        </script>
         <script src="static/js/app.js?cache=bust30"></script>
 		<script type="text/javascript" src="static/js/click_tracking.js"></script>
-<script>
-function handleLeadConversion(email_addr) {
-   var data = {
-     em: email_addr,
-     source: 'truetokensale.com',
-     unid: $("#form-version-code").val() + "-" + new Date().getTime(),
-     detail: "LANG=" + localStorage.getItem('trueLanguage') 
-       + "|CURR=" + $("#signupCurrency").val()
-       + "|RANGE=" + $("#signupCurrencyRange").val() 
-       + "|FN=" + $("#formFirstName").val() 
-       + "|LN=" + $("#formLastName").val() 
-       + "|EM=" + $("#formEmail").val() 
-     , 
-       
-     a: 1
-   };
-   return trackLead(data);
-}
-</script>   
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125567854-1"></script>
 <script>
