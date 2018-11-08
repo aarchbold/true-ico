@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="home-video">
-                    <video width="560" height="315" controls poster="static/images/poster.jpg">
+                    <video class="main_vid" width="560" height="315" controls poster="static/images/poster.jpg">
                         <source src="static/video/true-intro.mp4" type="video/mp4">
                         <source src="movie.ogg" type="video/ogg">
                         Your browser does not support the video tag.
@@ -120,7 +120,7 @@
                         		<div style="display:none" id="submissionErrorMssg" data-text="submissionerrormssg">We couldn’t validate your data. Please re-check your information and try again.</div>
 
                                 <div class="home-signup__cta">
-                                    <button data-text="formbutton" type="submit" id="formSubmit" class="button button-signup">I'M INTERESTED, SIGN ME UP</button>
+                                    <button data-text="formbutton" type="submit" id="formSubmit" class="button button-signup" onClick="actionTrack('1308');">I'M INTERESTED, SIGN ME UP</button>
                                 </div>
                             </div>
                         </form>
@@ -230,9 +230,46 @@
                 return trackLead(data);
             }
             /* alert('i set up function handleLeadConversion'); */
-
+			
+			
         </script>
         <script src="static/js/app.js?cache=bust30"></script>
+		<script type="text/javascript">
+			var triggerAtY = $('.features').offset().top - $(window).outerHeight();
+
+			$(window).scroll(function(event) {
+			  // #target not yet in view
+				if (triggerAtY > $(window).scrollTop()) {
+				  return;
+			  }
+				//alert('I shall say it once, but only once');
+				actionTrack('1309');
+			  // remove this event handler
+			  $(this).off(event);
+			})
+
+			var counter = 0;
+			$(window).scroll(function(event) {
+				//console.log('I\'m scolling', $(window).scrollTop(), ++counter);
+			});
+			
+			
+			
+			$(document).ready(function(){
+				$(".main_vid").on("play", function() {
+					//console.log("video is playing");
+					actionTrack('1310');
+				});
+				$(".main_vid").on("ended", function() {
+					//console.log("video ended");
+					actionTrack('1311');
+				});
+			
+			})
+		</script>
+		
+		
+		
 		<script type="text/javascript" src="static/js/click_tracking.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125567854-1"></script>
