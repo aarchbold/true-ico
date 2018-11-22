@@ -242,8 +242,12 @@
 				if (triggerAtY > $(window).scrollTop()) {
 				  return;
 			  }
-				//alert('I shall say it once, but only once');
-				actionTrack('1309');
+                //alert('I shall say it once, but only once');
+                try {
+                    actionTrack('1309');
+                } catch(e) {
+                    console.log(e);
+                }
 			  // remove this event handler
 			  $(this).off(event);
 			})
@@ -257,12 +261,20 @@
 			
 			$(document).ready(function(){
 				$(".main_vid").on("play", function() {
-					//console.log("video is playing");
-					actionTrack('1310');
+                    //console.log("video is playing");
+                    try {
+                        actionTrack('1310');
+                    } catch(e) {
+                        console.log(e);
+                    }
 				});
 				$(".main_vid").on("ended", function() {
-					//console.log("video ended");
-					actionTrack('1311');
+                    //console.log("video ended");
+                    try {
+                        actionTrack('1311');
+                    } catch(e) {
+                        console.log(e);
+                    }
 				});
 			
 			})
