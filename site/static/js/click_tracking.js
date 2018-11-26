@@ -427,6 +427,18 @@ document.write('<!-- adroll Pixel --><scr' + 'ipt type="text/javascript">adroll_
     }
 }
 
+function do_progmech_traffic() {
+    try {
+document.write('<!-- progmech Pixel --><scr' + 'ipt src="https://secure.adnxs.com/seg?add=14803385&t=1" type="application/javascript"></scr' + 'ipt><!-- End progmech Pixel -->');
+ } catch(e) {
+        try {
+            console.log('Error doing progmech pixel:' + e);
+        } catch(e2) { /* let it go */
+
+        }
+    }
+}
+
 function do_thirdPartyTrackingAfterCookie() {
 
     var myClickCookie;
@@ -454,7 +466,8 @@ function do_thirdPartyTrackingAfterCookie() {
 
 
 function _3ptac_drawbridgeTrack(_puuid) {
-    var dom = 'trueapp.co';
+    //var dom = 'trueapp.co';
+    var dom = 'truetokensale.com-wl';
     /*
      <img width="1" height="1" src="https://p.adsymptotic.com/d/px/?_pid=15805&_psign=08d10d24d68b08b4e5c0f2d24b7f252b&_pu=luminas.com&_puuid=<YOUR COOKIE ID>&_rand=<RANDOM CACHE BUSTER>"/>
      from their spec
@@ -471,7 +484,7 @@ function _3ptac_drawbridgeTrack(_puuid) {
         try { mdalert("warning! No _puuid passed in. Use _rand for now"); } catch(e) { }
         // SimpleCookie ("_ADSYMPT_",_puuid, 24*60*30,"/");
     }
-    var myPixel = 'https://p.adsymptotic.com/d/px/?_pid=15805&_psign=08d10d24d68b08b4e5c0f2d24b7f252b&_pu=' + dom + '&_puuid=' + _puuid + '&_rand=' + _rand;
+    var myPixel = 'https://p.adsymptotic.com/d/px/?_pid=15805&_psign=08d10d24d68b08b4e5c0f2d24b7f252b&_pp=' + dom + '&_puuid=' + _puuid + '&_rand=' + _rand;
     try { mdalert('myPixel: ' + myPixel); } catch(e) { }
 
     try {
@@ -503,3 +516,4 @@ do_facebook_sitetraffic();
 do_ttd_sitetraffic();
 do_linkedin_traffic();
 do_adroll_traffic();
+do_progmech_traffic();
