@@ -693,6 +693,36 @@ body {
   }
 }
 
+.telegram {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+@media (max-width: 820px) {
+  .telegram {
+    position: absolute;
+    top: 5px;
+    bottom: initial;
+  }
+}
+
+a.telegram_link {
+  color: #ffffff;
+}
+
+.telegram_icon {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+.telegram_txt {
+  float: right;
+  padding-top: 16px;
+  display: none;
+}
+
 /************************************
           MINIMALECT 0.9
   A minimalistic select replacement

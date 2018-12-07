@@ -51,7 +51,13 @@
                     <!-- <a href="#" data-language="CH" class="language-selector__item">Chinese</a> -->
                 </div>
             </div>
-            <img class="home-comet1" src="static/images/comet.png" />
+			
+			<a href="https://t.me/TrueApp" target="_blank" class="telegram_link" onClick="actionTrack('1312');"><div class="telegram">
+				<img src="static/images/icons/telegram_icon.png" class="telegram_icon" alt="Join Us On Telegram">
+				<div class="telegram_txt">Join Us On Telegram</div>
+			</div></a>
+            
+			<img class="home-comet1" src="static/images/comet.png" />
             <img class="home-comet2" src="static/images/comet.png" />
             <img class="home-comet3" src="static/images/comet.png" />
             <div class="home-container scrollerino">
@@ -259,6 +265,47 @@
 			
 			
 			
+			$.fn.isInViewport = function() {
+				var elementTop = $(this).offset().top;
+				var elementBottom = elementTop + $(this).outerHeight();
+				var viewportTop = $(window).scrollTop();
+				var viewportBottom = viewportTop + $(window).height();
+				return elementBottom > viewportTop && elementTop < viewportBottom;
+			};
+			
+			
+			$(window).on('resize scroll', function() {
+			  
+				if ($('.home-footer-image').isInViewport()) {
+				  $('.telegram_txt').css('color','#25247C');
+				} else {
+				  $('.telegram_txt').css('color','#FFFFFF');
+				}
+			 });
+			
+			
+			
+			function showTelText(){
+				
+				if($(window).width() < 1600){
+					$('.telegram_txt').hide();
+					$(function() {
+						$('.telegram_icon').hover(function(){
+							$('.telegram_txt').fadeIn();
+						}, function() { 
+							$('.telegram_txt').fadeOut(); 
+						});
+					});
+						
+										
+				} else {
+					$('.telegram_txt').show();
+				}	
+				
+				
+				
+			}
+			
 			$(document).ready(function(){
 				$(".main_vid").on("play", function() {
                     //console.log("video is playing");
@@ -275,6 +322,13 @@
                     } catch(e) {
                         console.log(e);
                     }
+				});
+				
+				
+				showTelText();
+				
+				$(window).resize(function(){
+					showTelText();
 				});
 			
 			})

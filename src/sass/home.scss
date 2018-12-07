@@ -319,3 +319,35 @@ body {
         padding-right: 20px;
     }
 }
+
+// telegram styles
+
+.telegram{
+	    position:fixed;
+		bottom:5px;
+		left:5px;
+		cursor: pointer;
+    
+    @media (max-width: $breakpoint-nav-stack) {
+        position:absolute;
+		top:5px;
+		bottom: initial;
+    }
+
+}
+
+a.telegram_link{
+	color:#ffffff;
+}
+
+.telegram_icon{
+	width:50px;
+	height:50px;
+	float:left;
+}
+
+.telegram_txt{
+	float:right;
+	padding-top:16px;
+	display: none;
+}
